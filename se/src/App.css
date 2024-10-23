@@ -1,0 +1,196 @@
+.header {
+  height: 48px;
+  border-bottom: 0.5px solid rgba(60, 60, 67, 0.36);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  z-index: 2;
+}
+.header__logo-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.header__logo {
+  height: 40px;
+  width: 40px;
+  background-image: url("./assets/images/ES_Logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header__container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  height: 100%;
+}
+.nav {
+  width: 182px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+  color: #000000;
+}
+.nav__item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.nav__link--active {
+  border-bottom: 2px solid #000000;
+}
+.email {
+  width: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 12px;
+  color: rgba(60, 60, 67, 0.6);
+}
+.email__text {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  letter-spacing: 1.1px;
+}
+.email__copied {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  /* letter-spacing: -0.4px; */
+  color: #000000;
+  opacity: 0;
+  transition: 0.3s;
+  display: none;
+}
+.email__copied--active {
+  opacity: 1;
+  transition: 0.3s;
+  display: block;
+}
+.email__btn {
+  width: 59px;
+  height: 28px;
+  background-color: #ffffff;
+  border: 1.5px solid rgba(60, 60, 67, 0.3);
+  border-radius: 20px;
+}
+.burger-menu {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .email__text,
+  .email__copied,
+  .email__img {
+    display: none;
+  }
+  .email {
+    width: 86px;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  .header__logo {
+    margin-right: auto;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+/* burger menu ------------- */
+.burger-icon {
+  width: 18px;
+  height: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger-icon .bar {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transition: 0.3s ease;
+}
+
+/* Анимация при открытии бургера */
+.burger-icon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+/* Скрытое меню */
+.menu {
+  position: absolute;
+  top: 49px;
+  right: -100%;
+  height: calc(100vh - 49px);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  transition: right 0.3s ease;
+  z-index: 1;
+}
+
+.menu.open {
+  right: 0;
+}
+
+/* Стили для пунктов меню */
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+}
+/* finish burger menu ----------- */
