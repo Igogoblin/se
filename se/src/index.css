@@ -14,7 +14,7 @@ body {
   font-family: "HelveticaNowText";
   src: url("./assets/fonts/HelveticaNowText-Regular.woff2") format("woff2"),
     url("./assets/fonts/HelveticaNowText-Regular.woff") format("woff"),
-    url("./assets/fonts/HelveticaNowTextRegular.ttf") format("truetype");
+    url("./assets/fonts/Helvetica Now Display.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -35,9 +35,9 @@ body {
 }
 @font-face {
   font-family: "HelveticaNowMicro";
-  src: url("./assets/fonts/HelveticaNowMicro-Medium.woff2") format("woff2"),
-    url("./assets/fonts/HelveticaNowMicro-Medium.woff") format("woff"),
-    url("./assets/fonts/HelveticaNowMicro-Medium.ttf") format("truetype");
+  src: url("./assets/fonts/HelveticaNowMicro-Regular.woff2") format("woff2"),
+    url("./assets/fonts/HelveticaNowMicro-Regular.woff") format("woff"),
+    url("./assets/fonts/HelveticaNowMicro-Regular.ttf") format("truetype");
 }
 body {
   font-family: "HelveticaNowText", sans-serif; /* Статичный шрифт */

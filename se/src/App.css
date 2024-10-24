@@ -76,9 +76,11 @@ nav {
   align-items: center;
   justify-content: start;
   gap: 5px;
-  letter-spacing: 1.1px;
+
+  /* letter-spacing: 1.1px; */
 }
 .email__title {
+  font-family: "HelveticaNowMicro";
   display: flex;
   align-items: center;
   position: relative;
@@ -108,7 +110,7 @@ nav {
   display: block;
 }
 .email__btn {
-  font-family: "HelveticaNowMicro";
+  font-family: "HelveticaNowText";
   width: 59px;
   height: 28px;
   background-color: #ffffff;
