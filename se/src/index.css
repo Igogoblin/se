@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "MyFont";
   src: url("./assets/fonts/HelveticaNowTextRegular.ttf") format("truetype"),
     url("./assets/fonts/HelveticaNowVar.ttf") format("truetype");
@@ -9,8 +9,40 @@
 body {
   font-family: "MyFont";
   overflow: hidden;
+} */
+@font-face {
+  font-family: "HelveticaNowText";
+  src: url("./assets/fonts/HelveticaNowText-Regular.woff2") format("woff2"),
+    url("./assets/fonts/HelveticaNowText-Regular.woff") format("woff"),
+    url("./assets/fonts/HelveticaNowTextRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "HelveticaNowVar";
+  src: url("./assets/fonts/Helvetica Now Var.woff2") format("woff2"),
+    url("./assets/fonts/Helvetica Now Var.woff") format("woff"),
+    url("./assets/fonts/HelveticaNowVar.ttf") format("truetype");
+  /* font-weight: 100 900; Для вариативного шрифта указываем диапазон */
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("./assets/fonts/Helvetica Now Display.woff2") format("woff2"),
+    url("./assets/fonts/Helvetica Now Display.woff") format("woff"),
+    url("./assets/fonts/Helvetica Now Display.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HelveticaNowMicro";
+  src: url("./assets/fonts/HelveticaNowMicro-Medium.woff2") format("woff2"),
+    url("./assets/fonts/HelveticaNowMicro-Medium.woff") format("woff"),
+    url("./assets/fonts/HelveticaNowMicro-Medium.ttf") format("truetype");
+}
+body {
+  font-family: "HelveticaNowText", sans-serif; /* Статичный шрифт */
+  overflow: hidden;
+}
 *,
 *::before,
 *::after {

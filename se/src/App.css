@@ -60,6 +60,7 @@ nav {
 }
 .email {
   width: 290px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,22 +71,32 @@ nav {
   color: rgba(60, 60, 67, 0.6);
 }
 .email__text {
+  height: 75%;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 5px;
   letter-spacing: 1.1px;
 }
-.email__copied {
-  position: absolute;
-  top: 70%;
-  left: 45%;
-  width: 100%;
+.email__title {
+  display: flex;
+  align-items: center;
+  position: relative;
   height: 100%;
+}
+.email__copied {
+  font-family: "HelveticaNowMicro";
+  position: absolute;
+  /* top: 70%;
+  left: 45%; */
+  bottom: 0;
+  right: 0;
+  /* width: 100%;
+  height: 100%; */
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
-  /* letter-spacing: -0.4px; */
+  letter-spacing: 0;
   color: #000000;
   opacity: 0;
   transition: 0.3s;
@@ -97,11 +108,13 @@ nav {
   display: block;
 }
 .email__btn {
+  font-family: "HelveticaNowMicro";
   width: 59px;
   height: 28px;
   background-color: #ffffff;
   border: 1.5px solid rgba(60, 60, 67, 0.3);
   border-radius: 20px;
+  letter-spacing: 0;
 }
 .burger-menu {
   display: none;

@@ -11,10 +11,11 @@ const Email = () => {
   return (
     <div onClick={copyClipboard} className="email">
       <div className="email__text">
-        sokolovski.ea@gmail.com{" "}
+        <div className="email__title">
+          sokolovski.ea@gmail.com <span className="email__copied">copied</span>
+        </div>
         <img src={copyImage} alt="copy email" className="email__img" />
       </div>
-      <span className="email__copied">copied</span>
 
       <button className="email__btn">Email</button>
     </div>
