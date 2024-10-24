@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+/* eslint-disable no-undef */
+import { Routes, Route, HashRouter, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
@@ -6,9 +7,11 @@ import About from "./pages/About";
 import Approach from "./pages/Approach";
 import Contacts from "./pages/Contacts";
 
+// const basename = process.env.NODE_ENV === "production" ? "/se" : "";
 function App() {
   return (
-    <BrowserRouter basename="/se">
+    // <HashRouter basename={basename}>
+    <BrowserRouter>
       <Layout />
       <Routes>
         <Route index element={<Home />} />
@@ -18,6 +21,8 @@ function App() {
 
         <Route path="*" element={<div>Page not found </div>} />
       </Routes>
+      {/* </Router> */}
+      {/* // </HashRouter> */}
     </BrowserRouter>
   );
 }
