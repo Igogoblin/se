@@ -43,6 +43,7 @@ nav {
   line-height: 16px;
   letter-spacing: -0.4px;
   color: #000000;
+  overflow: hidden;
 }
 .nav__item {
   height: 100%;
@@ -54,9 +55,86 @@ nav {
   display: flex;
   align-items: center;
   color: #000000;
+  /*  */
 }
+/* для ховера ссылок --------*/
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform-origin: center bottom;
+}
+
+.nav__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.nav__item:hover::before {
+  width: 100%;
+}
+
+.nav__item:hover .nav__link {
+  transform: rotateX(360deg);
+  /* color: #007bff; Можно изменить цвет ссылки при ховере */
+}
+
+/* .nav__link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+.nav__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::before {
+  width: 100%;
+}
+
+.nav__link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.nav__link:hover span {
+  transform: rotateX(360deg);
+}
+
+.nav__link.out {
+  animation: scrollOut 0.5s forwards;
+}
+
+@keyframes scrollOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+} */
+/* finish hover ----------------- */
 .nav__link--active {
   border-bottom: 2px solid #000000;
+  margin-top: 2px;
 }
 .email {
   width: 290px;
@@ -76,8 +154,6 @@ nav {
   align-items: center;
   justify-content: start;
   gap: 5px;
-
-  /* letter-spacing: 1.1px; */
 }
 .email__title {
   font-family: "HelveticaNowMicro";
@@ -89,12 +165,8 @@ nav {
 .email__copied {
   font-family: "HelveticaNowMicro";
   position: absolute;
-  /* top: 70%;
-  left: 45%; */
   bottom: 0;
   right: 0;
-  /* width: 100%;
-  height: 100%; */
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
@@ -142,7 +214,7 @@ nav {
     display: block;
   }
 }
-/* burger menu ------------- */
+/* burger menu -------------------------------------- */
 .burger-icon {
   width: 18px;
   height: 9px;
@@ -173,7 +245,7 @@ nav {
   transform: rotate(-45deg) translate(1px, -1px);
 }
 
-/* Скрытое меню */
+/* Скрытое меню ------------------------- */
 .menu {
   position: absolute;
   top: 49px;
@@ -192,7 +264,7 @@ nav {
   right: 0;
 }
 
-/* Стили для пунктов меню */
+/* Стили для пунктов меню -------------------- */
 .menu ul {
   list-style: none;
   padding: 0;
@@ -209,3 +281,5 @@ nav {
   line-height: 24px;
 }
 /* finish burger menu ----------- */
+
+/* start footer ----------------------------------------- */
