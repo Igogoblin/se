@@ -57,7 +57,7 @@ nav {
   color: #000000;
   /*  */
 }
-/* для ховера ссылок --------*/
+/* для hover ссылок --------*/
 .nav__item {
   position: relative;
 }
@@ -84,7 +84,7 @@ nav {
 
 .nav__item:hover .nav__link {
   transform: rotateX(360deg);
-  /* color: #007bff; Можно изменить цвет ссылки при ховере */
+  /* color: #007bff; Можно изменить цвет ссылки при hover */
 }
 
 /* .nav__link {
@@ -232,7 +232,7 @@ nav {
   transition: 0.3s ease;
 }
 
-/* Анимация при открытии бургера */
+/* Анимация при открытии burger */
 .burger-icon.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
