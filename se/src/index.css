@@ -108,3 +108,7 @@ select {
   height: 100vh;
   justify-content: space-between;
 }
+
+.dark {
+  background-color: #000000;
+}

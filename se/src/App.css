@@ -45,6 +45,9 @@ nav {
   color: #000000;
   overflow: hidden;
 }
+.header__dark-mode .nav__item a {
+  color: rgba(255, 255, 255, 1);
+}
 .nav__item {
   height: 100%;
   display: flex;
@@ -148,6 +151,10 @@ nav {
   line-height: 12px;
   color: rgba(60, 60, 67, 0.6);
 }
+.email__dark-mode {
+  color: #ebebf599;
+  opacity: 0.6;
+}
 .email__text {
   height: 75%;
   display: flex;
@@ -190,6 +197,11 @@ nav {
   border-radius: 20px;
   letter-spacing: 0;
 }
+.email__btn-dark {
+  border-color: rgba(235, 235, 245, 0.3);
+  color: #ffffff;
+  background-color: #000000;
+}
 .burger-menu {
   display: none;
 }
@@ -231,7 +243,9 @@ nav {
   background-color: black;
   transition: 0.3s ease;
 }
-
+.burger-icon .bar.burger-icon-dark {
+  background-color: #ffffff;
+}
 /* Анимация при открытии burger */
 .burger-icon.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -259,7 +273,9 @@ nav {
   transition: right 0.3s ease;
   z-index: 1;
 }
-
+.menu-dark {
+  background-color: #000000;
+}
 .menu.open {
   right: 0;
 }
@@ -279,6 +295,9 @@ nav {
   text-decoration: none;
   font-size: 20px;
   line-height: 24px;
+}
+.menu-dark ul li a {
+  color: #ffffff;
 }
 /* finish burger menu ----------- */
 
