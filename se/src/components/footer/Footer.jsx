@@ -9,20 +9,24 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <div className="footer__language">en ru</div>
-        <div className="footer__dark-mode">
-          <img src={sunD} alt="light theme" />
-          <img src={moonL} alt="dark theme" />
+        <div className="footer__buttons">
+          <div className="footer__language">En Ru</div>
+          <div className="footer__dark-mode">
+            <img src={sunD} alt="light theme" />
+            <img src={moonL} alt="dark theme" />
+          </div>
         </div>
+
         <div className="footer__content">
           <img src={esGray} className="footer__img" alt="logo author" />
           <img src={copyright} className="footer__img" alt="copyright" />
           <p className="footer__text">
-            Eugene Sokolovski Design & Engineering 2012/2024
+            <span>Eugene Sokolovski </span> <span>Design & Engineering</span>{" "}
+            2012/2024
           </p>
         </div>
-        <div className="footer__coder">Code</div>
       </div>
+      <div className="footer__coder">Code</div>
     </footer>
   );
 };
