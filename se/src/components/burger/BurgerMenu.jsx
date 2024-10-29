@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import Mode from "../mode/Mode.jsx";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +56,9 @@ const BurgerMenu = () => {
             </NavLink>
           </li>
         </ul>
+        <div className="burger-menu__mode">
+          <Mode />
+        </div>
       </nav>
     </div>
   );
