@@ -80,15 +80,47 @@ nav {
   transition: width 0.3s ease;
 }
 
-.nav__item:hover::before {
+/* .nav__item.dark-theme-hover::before {
+  background-color: #ffffff;
+}*/
+.nav__item:hover::before,
+.nav__item.dark-theme-hover:hover::before {
   width: 100%;
 }
-
 .nav__item:hover .nav__link {
   transform: rotateX(360deg);
   /* color: #007bff; Можно изменить цвет ссылки при hover */
 }
+/* .nav__item.dark-theme-hover:hover .nav__link {
+  color: white;
+} */
+/* ======================================================================== */
+.nav__link.dark-theme-hover {
+  position: relative;
+  color: inherit; /* Чтобы текст следовал за основным цветом темы */
+  text-decoration: none;
+}
 
+.nav__link.dark-theme-hover::after {
+  content: "";
+  position: absolute;
+  /* bottom: -2px;  */
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav__item:hover .nav__link::after {
+  width: 100%;
+}
+
+.dark-theme-hover .nav__link::after {
+  background-color: white;
+}
+/* ======================================================================== */
 /* .nav__link {
   position: relative;
   display: inline-block;
@@ -136,6 +168,10 @@ nav {
 /* finish hover ----------------- */
 .nav__link--active {
   border-bottom: 2px solid #000000;
+  margin-top: 2px;
+}
+.nav__link.nav__link--dark {
+  border-bottom: 2px solid white;
   margin-top: 2px;
 }
 .header__light-mode {
