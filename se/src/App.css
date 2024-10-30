@@ -221,6 +221,9 @@ nav {
   nav {
     display: none;
   }
+  .header__container {
+    justify-content: end;
+  }
   .header__logo {
     margin-right: auto;
   }
