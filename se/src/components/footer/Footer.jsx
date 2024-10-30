@@ -35,7 +35,7 @@ const Footer = () => {
           />
           <img
             src={theme.theme === "dark" ? copyrightDark : copyright}
-            className="footer__img"
+            className="footer__img footer__copyright"
             alt="copyright"
             style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
           />
@@ -49,7 +49,7 @@ const Footer = () => {
             <span className="footer__text-job">
               {theme.language === "en"
                 ? "Design & Engineering"
-                : "Дизайн и Инженерия"}
+                : "Дизайн и проектирование"}
             </span>{" "}
             2012/2024
           </p>

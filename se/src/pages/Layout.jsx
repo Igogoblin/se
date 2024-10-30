@@ -9,8 +9,10 @@ import { useSelector } from "react-redux";
 const Layout = () => {
   const activeLink = "nav__link nav__link--active";
   const normalLink = "nav__link";
+  // const forLightMode = "header__light-mode";
   // const forDarkMode = "header__dark-mode";
   const theme = useSelector((state) => state.mode);
+
   return (
     <div className="header">
       <div className="header__logo-container">

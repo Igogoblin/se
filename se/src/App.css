@@ -138,6 +138,9 @@ nav {
   border-bottom: 2px solid #000000;
   margin-top: 2px;
 }
+.header__light-mode {
+  border-bottom: 0.5px solid rgba(60, 60, 67, 0.36);
+}
 .email {
   width: 290px;
   height: 100%;
