@@ -45,7 +45,7 @@ const Footer = () => {
             }`}
             style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
           >
-            <span className="footer__text-name">Eugene Sokolovski </span>{" "}
+            <span className="footer__text-name">Eugene Sokolovski </span>
             <span className="footer__text-job">
               {theme.language === "en"
                 ? "Design & Engineering"

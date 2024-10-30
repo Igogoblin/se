@@ -3,10 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-.mode__active {
   cursor: pointer;
 }
+
 .mode__language {
   width: 66px;
   height: 24px;
@@ -65,12 +64,10 @@
   color: #ffffff;
   transition: 0.3s;
   /* cursor: pointer; */
-  cursor: default;
 }
 .ruL {
   color: #000000;
   transition: 0.3s;
-  cursor: default;
 }
 .footer__coder span {
   color: black;
@@ -80,4 +77,22 @@
 }
 .coder span {
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .mode__language {
+    width: 76px;
+  }
+  .language {
+    width: 36px;
+  }
+  .language__btn-active {
+    transform: translateX(38px);
+    transition: 0.3s;
+  }
+  .language__btn {
+    width: 36px;
+  }
+  .mode__container {
+    width: 60px;
+  }
 }

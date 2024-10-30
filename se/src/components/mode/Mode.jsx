@@ -12,11 +12,15 @@ const Mode = () => {
   const theme = useSelector((state) => state.mode);
   const [isMode, setIsMode] = useState(true);
 
-  const setLight = () => {
-    dispatch(setTheme("light"));
-  };
-  const setDark = () => {
-    dispatch(setTheme("dark"));
+  // const setLight = () => {
+  //   dispatch(setTheme("light"));
+  // };
+  // const setDark = () => {
+  //   dispatch(setTheme("dark"));
+  // };
+  const changeTheme = (theme) => {
+    dispatch(setTheme(theme));
+    // isMode ? setIsMode(false) : setIsMode(true);
   };
   const changeLanguage = (lang) => {
     dispatch(setLanguage(lang));
@@ -28,11 +32,12 @@ const Mode = () => {
         className={`mode__language ${
           theme.theme === "dark" ? "mode__language-dark" : ""
         }`}
+        onClick={() => changeLanguage(isMode ? "ru" : "en")}
       >
         <div
           className={`language ${isMode && theme.theme === "light" ? "enL" : ""}
             ${isMode && theme.theme === "dark" ? "ruL" : ""}`}
-          onClick={!isMode ? () => changeLanguage("en") : undefined}
+          // onClick={!isMode ? () => changeLanguage("en") : undefined}
         >
           En
         </div>
@@ -40,7 +45,7 @@ const Mode = () => {
           className={`language ${isMode ? "" : "enL"}
             ${!isMode && theme.theme === "dark" ? "ruL" : ""}
             `}
-          onClick={isMode ? () => changeLanguage("ru") : undefined}
+          // onClick={isMode ? () => changeLanguage("ru") : undefined}
         >
           Ru
         </div>
@@ -50,18 +55,21 @@ const Mode = () => {
           }`}
         ></div>
       </div>
-      <div className="mode__container">
+      <div
+        className="mode__container"
+        onClick={() => changeTheme(theme.theme === "light" ? "dark" : "light")}
+      >
         <img
-          onClick={setLight}
+          // onClick={setLight}
           src={theme.theme === "light" ? sunD : sunL}
           alt="light theme"
-          className={theme.theme === "dark" ? "mode__active" : ""}
+          // className={theme.theme === "dark" ? "mode__active" : ""}
         />
         <img
-          onClick={setDark}
+          // onClick={setDark}
           src={theme.theme === "dark" ? moonD : moonL}
           alt="dark theme"
-          className={theme.theme === "light" ? "mode__active" : ""}
+          // className={theme.theme === "light" ? "mode__active" : ""}
         />
       </div>
     </>
