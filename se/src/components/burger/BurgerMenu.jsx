@@ -5,7 +5,7 @@ import Mode from "../mode/Mode.jsx";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const theme = useSelector((state) => state.mode.theme);
+  const theme = useSelector((state) => state.mode);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -20,39 +20,39 @@ const BurgerMenu = () => {
       >
         <div
           className={`bar ${isOpen ? "open" : ""} ${
-            theme === "dark" ? "burger-icon-dark" : ""
+            theme.theme === "dark" ? "burger-icon-dark" : ""
           }`}
         ></div>
         <div
           className={`bar ${isOpen ? "open" : ""} ${
-            theme === "dark" ? "burger-icon-dark" : ""
+            theme.theme === "dark" ? "burger-icon-dark" : ""
           }`}
         ></div>
         <div
           className={`bar ${isOpen ? "open" : ""} ${
-            theme === "dark" ? "burger-icon-dark" : ""
+            theme.theme === "dark" ? "burger-icon-dark" : ""
           }`}
         ></div>
       </div>
       <nav
         className={`menu ${isOpen ? "open" : ""} ${
-          theme === "dark" ? "menu-dark" : ""
+          theme.theme === "dark" ? "menu-dark" : ""
         }`}
       >
         <ul>
           <li>
             <NavLink to={"/about"} onClick={handleLinkClick}>
-              About
+              {theme.language === "ru" ? "О себе" : "About"}
             </NavLink>
           </li>
           <li>
             <NavLink to={"/approach"} onClick={handleLinkClick}>
-              Approach
+              {theme.language === "ru" ? "Подход" : "Approach"}
             </NavLink>
           </li>
           <li>
             <NavLink to={"/contacts"} onClick={handleLinkClick}>
-              Contacts
+              {theme.language === "ru" ? "Контакты" : "Contacts"}
             </NavLink>
           </li>
         </ul>

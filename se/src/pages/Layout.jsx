@@ -10,17 +10,21 @@ const Layout = () => {
   const activeLink = "nav__link nav__link--active";
   const normalLink = "nav__link";
   // const forDarkMode = "header__dark-mode";
-  const theme = useSelector((state) => state.mode.theme);
+  const theme = useSelector((state) => state.mode);
   return (
     <div className="header">
       <div className="header__logo-container">
         <NavLink to={"/"} className="header__logo">
-          <img src={theme === "light" ? esL : esD} alt="logo" />
+          <img src={theme.theme === "light" ? esL : esD} alt="logo" />
         </NavLink>
       </div>
       <div className="header__container">
         <nav>
-          <ul className={`nav ${theme === "dark" ? " header__dark-mode" : ""}`}>
+          <ul
+            className={`nav ${
+              theme.theme === "dark" ? " header__dark-mode" : ""
+            }`}
+          >
             <li className="nav__item">
               <NavLink
                 to={"/about"}
@@ -28,7 +32,7 @@ const Layout = () => {
                   isActive ? activeLink : normalLink
                 }
               >
-                About
+                {theme.language === "en" ? "About" : "О себе"}
               </NavLink>
             </li>
             <li className="nav__item">
@@ -38,7 +42,7 @@ const Layout = () => {
                   isActive ? activeLink : normalLink
                 }
               >
-                Approach
+                {theme.language === "en" ? "Approach" : "Подход"}
               </NavLink>
             </li>
             <li className="nav__item">
@@ -48,7 +52,7 @@ const Layout = () => {
                   isActive ? activeLink : normalLink
                 }
               >
-                Contacts
+                {theme.language === "en" ? "Contacts" : "Контакты"}
               </NavLink>
             </li>
           </ul>

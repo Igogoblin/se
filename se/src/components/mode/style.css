@@ -18,17 +18,22 @@
   font-size: 11px;
   line-height: 16px;
   letter-spacing: -0.5px;
-  /* background-color: rgba(118, 118, 128, 0.12); */
+  background-color: rgba(118, 118, 128, 0.12);
+  color: rgba(60, 60, 67, 0.6);
   border-radius: 15px;
   border: none;
   padding: 2px;
   position: relative;
-  cursor: pointer;
+}
+.mode__language-dark {
+  background: rgba(190, 192, 194, 0.29);
+  color: rgba(235, 235, 245, 0.6);
 }
 .language {
   width: 31px;
   height: 20px;
   border-radius: 15px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +54,9 @@
   border: 0.5px solid rgba(60, 60, 67, 0.3);
   cursor: pointer;
 }
+.language__btn-dark {
+  background-color: #ffffff;
+}
 .language__btn-active {
   transform: translateX(31px);
   transition: 0.3s;
@@ -56,10 +64,20 @@
 .enL {
   color: #ffffff;
   transition: 0.3s;
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: default;
 }
 .ruL {
   color: #000000;
   transition: 0.3s;
-  cursor: pointer;
+  cursor: default;
+}
+.footer__coder span {
+  color: black;
+}
+.footer__coder.coder {
+  color: rgba(235, 235, 245, 0.6);
+}
+.coder span {
+  color: white;
 }

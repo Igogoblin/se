@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
 
 const Contacts = () => {
-  const theme = useSelector((state) => state.mode.theme);
+  const theme = useSelector((state) => state.mode);
   return (
     <div>
-      <h1 style={{ color: theme === "dark" ? "white" : "black" }}>
-        Contacts ...
+      <h1 style={{ color: theme.theme === "dark" ? "white" : "black" }}>
+        {theme.language === "en" ? "Contacts" : "Страница контактов"} ...
       </h1>
     </div>
   );

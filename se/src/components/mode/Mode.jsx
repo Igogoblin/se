@@ -11,7 +11,7 @@ const Mode = () => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.mode);
   const [isMode, setIsMode] = useState(true);
-  console.log(theme);
+
   const setLight = () => {
     dispatch(setTheme("light"));
   };
@@ -25,23 +25,14 @@ const Mode = () => {
   return (
     <>
       <div
-        className="mode__language"
-        style={
-          theme.theme === "dark"
-            ? {
-                backgroundColor: "rgba(190, 192, 194, 0.29)",
-                color: "rgba(235, 235, 245, 0.6)",
-              }
-            : {
-                backgroundColor: "rgba(118, 118, 128, 0.12);",
-                color: "rgba(60, 60, 67, 0.6)",
-              }
-        }
+        className={`mode__language ${
+          theme.theme === "dark" ? "mode__language-dark" : ""
+        }`}
       >
         <div
           className={`language ${isMode && theme.theme === "light" ? "enL" : ""}
             ${isMode && theme.theme === "dark" ? "ruL" : ""}`}
-          onClick={() => changeLanguage("en")}
+          onClick={!isMode ? () => changeLanguage("en") : undefined}
         >
           En
         </div>
@@ -49,17 +40,14 @@ const Mode = () => {
           className={`language ${isMode ? "" : "enL"}
             ${!isMode && theme.theme === "dark" ? "ruL" : ""}
             `}
-          onClick={() => changeLanguage("ru")}
+          onClick={isMode ? () => changeLanguage("ru") : undefined}
         >
           Ru
         </div>
         <div
-          className={`language__btn ${isMode ? "" : "language__btn-active"}`}
-          style={
-            theme.theme === "dark"
-              ? { backgroundColor: "white" }
-              : { backgroundColor: "black" }
-          }
+          className={`language__btn ${isMode ? "" : "language__btn-active"} ${
+            theme.theme === "dark" ? "language__btn-dark" : ""
+          }`}
         ></div>
       </div>
       <div className="mode__container">
