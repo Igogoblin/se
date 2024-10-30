@@ -1,10 +1,10 @@
 .header {
   height: 48px;
-  border-bottom: 0.5px solid rgba(60, 60, 67, 0.36);
+  border-bottom: 0.5px solid rgba(235, 235, 245, 0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 14px;
+  /* padding: 0 14px; */
   z-index: 2;
 }
 .header__logo-container {
@@ -13,7 +13,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-left: 8px;
+  margin-left: 16px;
 }
 .header__logo {
   height: 40px;
@@ -183,12 +183,13 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   position: relative;
   font-weight: 400;
   font-size: 13px;
   line-height: 12px;
   color: rgba(60, 60, 67, 0.6);
+  margin-right: 16px;
 }
 .email__dark-mode {
   color: #ebebf599;
@@ -266,6 +267,7 @@ nav {
   }
   .burger-menu {
     display: block;
+    margin-right: 16px;
   }
 }
 /* burger menu -------------------------------------- */

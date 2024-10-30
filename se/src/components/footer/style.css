@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.5px solid rgba(60, 60, 67, 0.36);
+  border-top: 0.5px solid rgba(235, 235, 245, 0.6);
   padding: 0 14px;
 }
 .footer__container {
@@ -20,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 
 .footer__content {
