@@ -79,20 +79,23 @@
   color: white;
 }
 @media screen and (max-width: 768px) {
-  .mode__language {
+  /* .mode__language {
     width: 76px;
+    height: 28px;
   }
   .language {
     width: 36px;
-  }
+    height: 28px;
+  } */
   .language__btn-active {
     transform: translateX(38px);
     transition: 0.3s;
   }
-  .language__btn {
+  /* .language__btn {
     width: 36px;
+    height: 28px;
   }
   .mode__container {
     width: 60px;
-  }
+  } */
 }
