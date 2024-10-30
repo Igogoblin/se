@@ -3,7 +3,7 @@ import copyImage from "../../assets/images/copyEmail.svg";
 import copyImageDark from "../../assets/images/copyEmailDark.svg";
 
 const Email = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.mode.theme);
   function copyClipboard() {
     const text = "sokolovski.ea@gmail.com";
     navigator.clipboard.writeText(text);

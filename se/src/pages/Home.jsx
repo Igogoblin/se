@@ -3,7 +3,7 @@
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.mode.theme);
   return (
     <main>
       <h1 style={{ color: theme === "dark" ? "white" : "black" }}>Home ...</h1>

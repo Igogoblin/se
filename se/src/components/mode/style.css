@@ -7,3 +7,59 @@
 .mode__active {
   cursor: pointer;
 }
+.mode__language {
+  width: 66px;
+  height: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "HelveticaNowMicro";
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
+  /* background-color: rgba(118, 118, 128, 0.12); */
+  border-radius: 15px;
+  border: none;
+  padding: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.language {
+  width: 31px;
+  height: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+.language__btn {
+  width: 31px;
+  height: 20px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: #000000;
+  z-index: 1;
+  left: 2px;
+  top: 2px;
+  transform: translateX(0);
+  transition: 0.3s;
+  border: 0.5px solid rgba(60, 60, 67, 0.3);
+  cursor: pointer;
+}
+.language__btn-active {
+  transform: translateX(31px);
+  transition: 0.3s;
+}
+.enL {
+  color: #ffffff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.ruL {
+  color: #000000;
+  transition: 0.3s;
+  cursor: pointer;
+}

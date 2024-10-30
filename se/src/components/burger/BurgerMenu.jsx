@@ -5,7 +5,7 @@ import Mode from "../mode/Mode.jsx";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.mode.theme);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };

@@ -11,7 +11,7 @@ import esDark from "../../assets/images/esDark.svg";
 // import sunL from "../../assets/images/sunLight.svg";
 // import moonD from "../../assets/images/moonDark.svg";
 const Footer = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.mode.theme);
   useEffect(() => {
     if (theme === "dark") {
       document.body.classList.add("dark");
