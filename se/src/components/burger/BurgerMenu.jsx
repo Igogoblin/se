@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import Mode from "../mode/Mode.jsx";
@@ -12,6 +12,16 @@ const BurgerMenu = () => {
   const handleLinkClick = () => {
     setIsOpen(false);
   };
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
   return (
     <div className="burger-menu">
       <div
@@ -37,7 +47,7 @@ const BurgerMenu = () => {
       <nav
         className={`menu ${isOpen ? "open" : ""} ${
           theme.theme === "dark" ? "menu-dark" : ""
-        }`}
+        } `}
       >
         <ul>
           <li>
