@@ -362,6 +362,7 @@ nav {
 
 /* start about -------------------------------------- */
 .about {
+  margin-top: 40px;
   width: 100%;
   /* height: 100vh; */
   display: flex;
@@ -373,9 +374,9 @@ nav {
   max-width: 748px;
   width: 100%;
   height: 1502px;
-  background-image: url("./assets/images/aboutCentre.png");
+  /* background-image: url("./assets/images/aboutCentre.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% auto; */
   display: flex;
   justify-content: center;
   align-items: center;
