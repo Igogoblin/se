@@ -29,34 +29,36 @@ const Footer = () => {
         <div className="footer__content">
           <img
             src={theme.theme === "dark" ? esDark : esGray}
-            className="footer__img"
+            className="footer__img footer__content-logo"
             alt="logo author"
             style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
           />
-          <img
-            src={theme.theme === "dark" ? copyrightDark : copyright}
-            className="footer__img footer__copyright"
-            alt="copyright"
-            style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
-          />
-          <p
-            className={`footer__text ${
-              theme.theme === "dark" ? "footer__content-dark" : ""
-            }`}
-            style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
-          >
-            <span className="footer__text-name">
-              {theme.language === "en"
-                ? "Eugene Sokolovski"
-                : "Евгений Соколовский"}{" "}
-            </span>
-            <span className="footer__text-job">
-              {theme.language === "en"
-                ? "Design & Engineering"
-                : "Дизайн и проектирование"}
-            </span>{" "}
-            2012/2024
-          </p>
+          <div className="footer__content-text">
+            <img
+              src={theme.theme === "dark" ? copyrightDark : copyright}
+              className="footer__img footer__copyright"
+              alt="copyright"
+              style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
+            />
+            <p
+              className={`footer__text ${
+                theme.theme === "dark" ? "footer__content-dark" : ""
+              }`}
+              style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
+            >
+              <span className="footer__text-name">
+                {theme.language === "en"
+                  ? "Eugene Sokolovski"
+                  : "Евгений Соколовский"}{" "}
+              </span>
+              <span className="footer__text-job">
+                {theme.language === "en"
+                  ? "Design & Engineering"
+                  : "Дизайн и проектирование"}
+              </span>{" "}
+              2012/2024
+            </p>
+          </div>
         </div>
       </div>
       <div className={`footer__coder ${theme.theme === "dark" ? "coder" : ""}`}>

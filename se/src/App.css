@@ -201,6 +201,7 @@ nav {
   align-items: center;
   justify-content: start;
   gap: 5px;
+  margin-right: 16px;
 }
 .email__title {
   font-family: "HelveticaNowMicro";
