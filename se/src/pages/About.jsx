@@ -1,5 +1,5 @@
 // import { useSelector } from "react-redux";
-// import aboutCentre from "../assets/images/aboutCentre.png";
+import aboutCentre from "../assets/images/aboutCentre.png";
 const ABOUT = {
   skills: {
     title: "Skills",
@@ -39,9 +39,16 @@ const About = () => {
         {theme.language === "en" ? "About ..." : "Страница о себе ..."}
       </h1> */}
       <div className="about__container">
-        <div className="about__skills">{ABOUT.skills.title}</div>
-        <div className="about__skills-text">{ABOUT.skills.text}</div>
-        <div className="about__manager"></div>
+        <div className="about__area">
+          <div className="about__skills">{ABOUT.skills.title}</div>
+          <div className="about__skills-text">{ABOUT.skills.text}</div>
+        </div>
+        {/* <img src={aboutCentre} alt="background image" className="about__back"/> */}
+        {/* <div className="about__manager">
+          {ABOUT.list.map((element, index) => {
+            <span key={index}>{element}</span>;
+          })}
+        </div> */}
       </div>
     </section>
   );

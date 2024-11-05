@@ -95,8 +95,48 @@ select {
   /* overflow: hidden; */
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   justify-content: space-between;
+}
+
+:root {
+  --label-light_primary-100: rgba(0, 0, 0, 0.1);
+  --label-light_secondary-60: rgba(60, 60, 67, 0.6);
+  --label-light_tertiary-30: rgba(60, 60, 67, 0.3);
+  --label-light_quaternary-18: rgba(60, 60, 67, 0.18);
+  --label-dark_primary-100: rgba(255, 255, 255, 1);
+  --label-dark_secondary-60: rgba(235, 235, 245, 0.6);
+  --label-dark_tertiary-30: rgba(235, 235, 245, 0.3);
+  --label-dark_quaternary-18: rgba(235, 235, 245, 0.18);
+  --fills-light_primary-20: rgba(120, 120, 128, 0.2);
+  --fills-light_secondary-16: rgba(120, 120, 128, 0.16);
+  --fills-light_tertiary-12: rgba(118, 118, 128, 0.12);
+  --fills-light_quaternary-8: rgba(116, 116, 128, 0.08);
+  --fills-dark_primary-36: rgba(120, 120, 128, 0.36);
+  --fills-dark_secondary-32: rgba(120, 120, 128, 0.32);
+  --fills-dark_tertiary-24: rgba(118, 118, 128, 0.24);
+  --fills-dark_quaternary-18: rgba(116, 116, 128, 0.18);
+  --systemBackgrounds-light_primary-100: rgba(255, 255, 255, 1);
+  --systemBackgrounds-light_secondary-100: rgba(242, 242, 247, 1);
+  --systemBackgrounds-light_tertiary-100: rgba(255, 255, 255, 1);
+  --systemBackgrounds-dark_base_primary-100: rgba(0, 0, 0, 1);
+  --systemBackgrounds-dark_base_secondary-100: rgba(28, 28, 30, 1);
+  --systemBackgrounds-dark_base_tertiary-100: rgba(44, 44, 46, 1);
+  --systemBackgrounds-dark_elevated_primary-100: rgba(28, 28, 30, 1);
+  --systemBackgrounds-dark_elevated_secondary-100: rgba(44, 44, 46, 1);
+  --systemBackgrounds-dark_elevated_tertiary-100: rgba(58, 58, 60, 1);
+  --groupedBackgrounds-light_primary-100: rgba(239, 239, 244, 1);
+  --groupedBackgrounds-light_secondary-100: rgba(255, 255, 255, 1);
+  --groupedBackgrounds-light_tertiary-100: rgba(239, 239, 244, 1);
+  --groupedBackgrounds-light_quaternary-80_M: rgba(242, 242, 242, 0.8);
+  --groupedBackgrounds-light_quaternary-12_M: rgba(242, 242, 242, 0.12);
+  --groupedBackgrounds-light_sextuple-70_M: rgba(245, 245, 245, 0.7);
+  --groupedBackgrounds-dark_base_primary-100: rgba(0, 0, 0, 1);
+  --groupedBackgrounds-dark_base_secondary-100: rgba(28, 28, 30, 1);
+  --groupedBackgrounds-dark_base_tertiary-100: rgba(44, 44, 46, 1);
+  --groupedBackgrounds-dark_elevated_primary-100: rgba(28, 28, 30, 1);
+  --groupedBackgrounds-dark_elevated_secondary-100: rgba(44, 44, 46, 1);
+  --groupedBackgrounds-dark_elevated_tertiary-100: rgba(60, 60, 62, 1);
 }
 
 .dark {
