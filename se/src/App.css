@@ -311,13 +311,16 @@ nav {
   justify-content: start;
   align-items: center;
   padding-left: 16px;
+  margin-bottom: 80px;
+  gap: 10px;
 }
 /* Скрытое меню ------------------------- */
 .menu {
-  position: absolute;
+  position: fixed;
   top: 49px;
   right: -100%;
-  height: calc(100vh - 49px);
+  /* bottom: 48px; */
+  height: calc(100vh - 49px-48px);
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
@@ -333,7 +336,9 @@ nav {
 .menu.open {
   right: 0;
 }
-
+.overflow-hidden {
+  overflow: hidden;
+}
 /* Стили для пунктов меню -------------------- */
 .menu ul {
   list-style: none;
@@ -354,5 +359,58 @@ nav {
   color: #ffffff;
 }
 /* finish burger menu ----------- */
+
+/* start about -------------------------------------- */
+.about {
+  margin-top: 40px;
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  background-image: url("./assets/images/Iam.png");
+  background-repeat: no-repeat;
+  /* background-size: 100% auto; */
+  background-size: contain;
+}
+.about__container {
+  max-width: 748px;
+  width: 100%;
+  height: 1502px;
+  /* background-image: url("./assets/images/Iam.png");
+  background-repeat: no-repeat;
+  /* background-size: 100% auto; */
+  /* background-size: contain; */
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  /* flex-direction: column; */
+  border: 1px solid black;
+  position: relative;
+}
+.about__area {
+  width: 50%;
+}
+.about__skills {
+  font-family: "HelveticaNowDisplay";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+  color: rgba(235, 235, 245, 0.3);
+}
+.about__skills-text {
+  font-family: "HelveticaNowDisplay";
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 36px;
+  letter-spacing: -0.4px;
+  color: rgba(235, 235, 245, 0.3);
+}
+.about__back {
+  position: absolute;
+}
+/* finish about ------------------------------------ */
 
 /* start footer ----------------------------------------- */
