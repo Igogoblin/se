@@ -7,10 +7,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.5px solid rgba(235, 235, 245, 0.6);
+  border-top: 0.5px solid rgba(60, 60, 67, 0.36);
   padding: 0 16px;
   z-index: 2;
   background-color: #ffffff;
+}
+.footer__dark-border {
+  border-top: 0.5px solid rgba(235, 235, 245, 0.6);
 }
 .footer__container {
   width: 70%;
@@ -65,6 +68,13 @@
   /* margin-right: 5px; */
   /* gap: 8px; */
   /* margin: 0 2px; */
+}
+.footer__img-opacity {
+  opacity: 0.6;
+}
+
+.footer__text-opacity {
+  opacity: 0.6;
 }
 .footer__text-job {
   margin: 0 5px;

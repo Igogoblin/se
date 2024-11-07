@@ -3,24 +3,26 @@ import { useSelector } from "react-redux";
 import esGray from "../../assets/images/esGray.svg";
 import copyright from "../../assets/images/copyright.svg";
 import Mode from "../mode/Mode";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import copyrightDark from "../../assets/images/copyrightDark.svg";
 import esDark from "../../assets/images/esDark.svg";
-// import sunD from "../../assets/images/sunDark.svg";
-// import moonL from "../../assets/images/moonLight.svg";
-// import sunL from "../../assets/images/sunLight.svg";
-// import moonD from "../../assets/images/moonDark.svg";
+
 const Footer = () => {
   const theme = useSelector((state) => state.mode);
-  useEffect(() => {
-    if (theme.theme === "dark") {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  }, [theme]);
+  console.log(theme);
+  // useEffect(() => {
+  //   if (theme.theme === "dark") {
+  //     document.body.classList.add("dark");
+  //   } else {
+  //     document.body.classList.remove("dark");
+  //   }
+  // }, [theme]);
   return (
-    <footer className="footer">
+    <footer
+      className={`footer ${
+        theme.theme === "dark" ? "footer__dark-border" : ""
+      }`}
+    >
       <div className="footer__container">
         <div className="footer__buttons">
           <Mode />
@@ -29,22 +31,25 @@ const Footer = () => {
         <div className="footer__content">
           <img
             src={theme.theme === "dark" ? esDark : esGray}
-            className="footer__img footer__content-logo"
+            className={`footer__img footer__content-logo ${
+              theme.theme === "dark" ? "footer__img-opacity" : ""
+            }`}
             alt="logo author"
-            style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
           />
           <div className="footer__content-text">
             <img
               src={theme.theme === "dark" ? copyrightDark : copyright}
-              className="footer__img footer__copyright"
+              className={`footer__img footer__copyright" ${
+                theme.theme === "dark" ? "footer__img-opacity" : ""
+              }`}
               alt="copyright"
-              style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
             />
             <p
               className={`footer__text ${
-                theme.theme === "dark" ? "footer__content-dark" : ""
+                theme.theme === "dark"
+                  ? "footer__content-dark footer__text-opacity"
+                  : ""
               }`}
-              style={theme.theme === "dark" ? { opacity: 0.6 } : undefined}
             >
               <span className="footer__text-name">
                 {theme.language === "en"
