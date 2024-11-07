@@ -7,10 +7,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.5px solid rgba(235, 235, 245, 0.6);
+  border-top: 0.5px solid rgba(60, 60, 67, 0.36);
   padding: 0 16px;
   z-index: 2;
   background-color: #ffffff;
+}
+.footer__dark-mode {
+  border-top: 0.5px solid rgba(235, 235, 245, 0.6);
+  background-color: black;
 }
 .footer__container {
   width: 70%;

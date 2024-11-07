@@ -5,7 +5,7 @@ import moonD from "../../assets/images/moonDark.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme, setLanguage } from "../../store/modeSlice";
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Mode = () => {
   const dispatch = useDispatch();
@@ -26,6 +26,13 @@ const Mode = () => {
     dispatch(setLanguage(lang));
     isMode ? setIsMode(false) : setIsMode(true);
   };
+  useEffect(() => {
+    if (theme.theme === "dark") {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [theme]);
   return (
     <>
       <div
