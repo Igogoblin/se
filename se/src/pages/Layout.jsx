@@ -15,7 +15,11 @@ const Layout = () => {
   const theme = useSelector((state) => state.mode);
 
   return (
-    <div className="header">
+    <div
+      className={`header ${
+        theme.theme === "dark" ? "header__dark-border" : ""
+      }`}
+    >
       <div className="header__logo-container">
         <NavLink to={"/"} className="header__logo">
           <img src={theme.theme === "light" ? esL : esD} alt="logo" />
