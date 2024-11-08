@@ -56,11 +56,12 @@
   align-items: center;
   max-width: 330px;
   width: 100%;
+  margin-left: 6px;
 }
 .footer__img.footer__copyright {
   width: 10px;
   height: 11px;
-  margin: 0 6px 0 5px;
+  margin: 0 6px;
 }
 .footer__content-dark {
   color: rgba(235, 235, 245, 0.6);

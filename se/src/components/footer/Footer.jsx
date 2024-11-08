@@ -33,7 +33,7 @@ const Footer = () => {
               theme.theme === "dark" ? "footer__img-opacity" : ""
             }`}
             alt="logo author"
-            style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
+            // style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
           />
           <div className="footer__content-text">
             <img
@@ -42,7 +42,7 @@ const Footer = () => {
                 theme.theme === "dark" ? "footer__img-opacity" : ""
               }`}
               alt="copyright"
-              style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
+              // style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
             />
             <p
               className={`footer__text ${
@@ -50,7 +50,7 @@ const Footer = () => {
                   ? "footer__content-dark footer__text-opacity"
                   : ""
               }`}
-              style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
+              // style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
             >
               <span className="footer__text-name">
                 {theme.language === "en"
