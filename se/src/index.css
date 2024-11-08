@@ -158,3 +158,14 @@ select {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------ */
+.page {
+  margin-top: 87px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
