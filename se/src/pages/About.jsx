@@ -1,5 +1,6 @@
-// import { useSelector } from "react-redux";
-import aboutCentre from "../assets/images/aboutCentre.png";
+import { useSelector } from "react-redux";
+import aboutImage from "../assets/images/Iam.png";
+// import aboutCentre from "../assets/images/aboutCentre.png";
 const ABOUT = {
   skills: {
     title: "Skills",
@@ -32,23 +33,18 @@ const ABOUT = {
   },
 };
 const About = () => {
-  // const theme = useSelector((state) => state.mode);
+  const theme = useSelector((state) => state.mode);
   return (
-    <section className="about">
-      {/* <h1 style={{ color: theme.theme === "dark" ? "white" : "black" }}>
-        {theme.language === "en" ? "About ..." : "Страница о себе ..."}
-      </h1> */}
+    <section
+      className={`about ${theme.theme === "dark" ? "about__dark" : ""}`}
+      id="about"
+    >
       <div className="about__container">
         <div className="about__area">
           <div className="about__skills">{ABOUT.skills.title}</div>
           <div className="about__skills-text">{ABOUT.skills.text}</div>
         </div>
-        {/* <img src={aboutCentre} alt="background image" className="about__back"/> */}
-        {/* <div className="about__manager">
-          {ABOUT.list.map((element, index) => {
-            <span key={index}>{element}</span>;
-          })}
-        </div> */}
+        <img src={aboutImage} alt="author" className="about__image" />
       </div>
     </section>
   );

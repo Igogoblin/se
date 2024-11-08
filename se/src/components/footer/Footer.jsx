@@ -9,7 +9,7 @@ import esDark from "../../assets/images/esDark.svg";
 
 const Footer = () => {
   const theme = useSelector((state) => state.mode);
-  console.log(theme);
+
   // useEffect(() => {
   //   if (theme.theme === "dark") {
   //     document.body.classList.add("dark");
@@ -19,9 +19,7 @@ const Footer = () => {
   // }, [theme]);
   return (
     <footer
-      className={`footer ${
-        theme.theme === "dark" ? "footer__dark-border" : ""
-      }`}
+      className={`footer ${theme.theme === "dark" ? "footer__dark-mode" : ""}`}
     >
       <div className="footer__container">
         <div className="footer__buttons">
@@ -35,6 +33,7 @@ const Footer = () => {
               theme.theme === "dark" ? "footer__img-opacity" : ""
             }`}
             alt="logo author"
+            style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
           />
           <div className="footer__content-text">
             <img
@@ -43,6 +42,7 @@ const Footer = () => {
                 theme.theme === "dark" ? "footer__img-opacity" : ""
               }`}
               alt="copyright"
+              style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
             />
             <p
               className={`footer__text ${
@@ -50,6 +50,7 @@ const Footer = () => {
                   ? "footer__content-dark footer__text-opacity"
                   : ""
               }`}
+              style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
             >
               <span className="footer__text-name">
                 {theme.language === "en"
