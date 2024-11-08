@@ -9,9 +9,11 @@
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  background-color: #ffffff;
 }
 .header__dark-border {
   border-bottom: 0.5px solid rgba(235, 235, 245, 0.6);
+  background-color: #000000;
 }
 
 .header__logo-container {
@@ -374,31 +376,60 @@ nav {
   background-size: cover;
   background-position: center; */
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: calc(100vh - 49px);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: rgba(251, 251, 251, 1);
+  background-color: rgba(251, 251, 251, 1);
+  padding-left: 8px;
 }
 .about__dark {
-  background-color: (161, 161, 161, 1);
+  background-color: rgb(161, 161, 161, 1);
 }
 .about__container {
-  margin-top: 40px;
+  margin-top: 87px;
   max-width: 748px;
   width: 100%;
-  height: 1502px;
+  /* height: 1502px; */
+  margin-bottom: 32px;
   display: flex;
   justify-content: end;
   align-items: start;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   position: relative;
-  max-height: 90vh; /* Limit the height to enable internal scrolling */
+  /* max-height: 90vh; Limit the height to enable internal scrolling */
   overflow-y: auto; /* Make container scrollable */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .about__area {
+  width: 100%;
+  z-index: 1;
+  mix-blend-mode: difference;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.about__area-place {
+  width: 50%;
+}
+.about__area-place-list {
+  width: 100%;
+  display: flex;
+}
+.about__area-place-title {
+  width: 50%;
+  font-family: "HelveticaNowDisplay";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+
+  /* margin-bottom: 32px; */
+}
+.about__title-text {
+  color: white;
+}
+.about__list {
   width: 50%;
 }
 .about__skills {
@@ -408,6 +439,9 @@ nav {
   line-height: 16px;
   letter-spacing: -0.4px;
   color: rgba(235, 235, 245, 0.3);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: start;
 }
 .about__skills-text {
   font-family: "HelveticaNowDisplay";
@@ -415,18 +449,32 @@ nav {
   font-size: 33px;
   line-height: 36px;
   letter-spacing: -0.4px;
-  color: rgba(235, 235, 245, 0.3);
+  /* color: rgba(235, 235, 245, 0.3); */
+  color: rgba(218, 218, 218, 1);
+  margin-bottom: 16px;
 }
+
 .about__back {
   position: absolute;
 }
 .about__image {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* z-index: -1; */
+}
+.about__item {
+  font-family: "HelveticaNowText";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+  color: white;
+  list-style-type: disc;
+  margin-left: 20px;
 }
 /* finish about ------------------------------------ */
 

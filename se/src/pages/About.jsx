@@ -39,10 +39,27 @@ const About = () => {
       className={`about ${theme.theme === "dark" ? "about__dark" : ""}`}
       id="about"
     >
-      <div className="about__container">
-        <div className="about__area">
-          <div className="about__skills">{ABOUT.skills.title}</div>
-          <div className="about__skills-text">{ABOUT.skills.text}</div>
+      <div className="about__container scrollable">
+        <div className="about__area ">
+          <div className="about__area-place">
+            <div className="about__skills">{ABOUT.skills.title}</div>
+          </div>
+          <div className="about__area-place">
+            <div className="about__skills-text">{ABOUT.skills.text}</div>
+          </div>
+          <div className="about__area-place-list">
+            <div className="about__area-place-title">
+              <p className="about__title-text">Product manager</p>{" "}
+              <p className="about__title-text">skills</p>
+            </div>
+            <ul className="about__list">
+              {ABOUT.skills.list.map((item) => (
+                <li className="about__item" key={item}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <img src={aboutImage} alt="author" className="about__image" />
       </div>
