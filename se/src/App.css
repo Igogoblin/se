@@ -372,6 +372,7 @@ nav {
 /* start about -------------------------------------- */
 .about {
   position: relative;
+  /* top: 48px; */
   /* background-image: url("./assets/images/Iam.png");
   background-size: cover;
   background-position: center; */
@@ -381,11 +382,23 @@ nav {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  /* overflow-y: auto; */
   background-color: rgba(251, 251, 251, 1);
   padding-left: 8px;
+  /* background-color: liner-gradient(
+    180deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  z-index: -10; */
 }
 .about__dark {
-  background-color: rgb(161, 161, 161, 1);
+  /* background-color: rgb(161, 161, 161, 1); */
+  background-color: liner-gradient(
+    180deg,
+    rgba(209, 209, 209, 1) 0%,
+    rgba(229, 229, 229, 1) 100%
+  );
 }
 .about__container {
   margin-top: 87px;
@@ -400,6 +413,9 @@ nav {
   position: relative;
   /* max-height: 90vh; Limit the height to enable internal scrolling */
   overflow-y: auto; /* Make container scrollable */
+}
+.scrollable {
+  overflow: visible;
 }
 .about__area {
   width: 100%;
@@ -473,7 +489,7 @@ nav {
   line-height: 16px;
   letter-spacing: -0.4px;
   color: white;
-  list-style-type: disc;
+  list-style-type: square;
   margin-left: 20px;
 }
 /* finish about ------------------------------------ */

@@ -99,7 +99,7 @@ select {
   justify-content: space-between;
 }
 
-:root {
+/* :root {
   --label-light_primary-100: rgba(0, 0, 0, 0.1);
   --label-light_secondary-60: rgba(60, 60, 67, 0.6);
   --label-light_tertiary-30: rgba(60, 60, 67, 0.3);
@@ -137,7 +137,7 @@ select {
   --groupedBackgrounds-dark_elevated_primary-100: rgba(28, 28, 30, 1);
   --groupedBackgrounds-dark_elevated_secondary-100: rgba(44, 44, 46, 1);
   --groupedBackgrounds-dark_elevated_tertiary-100: rgba(60, 60, 62, 1);
-}
+} */
 
 .dark {
   background-color: #000000;
@@ -147,19 +147,33 @@ select {
 }
 
 ::-webkit-scrollbar {
+  width: 3px; /* Фиксированная ширина */
+  opacity: 0; /* Скрыть по умолчанию */
+  z-index: -1;
+}
+
+::-webkit-scrollbar:hover {
+  opacity: 1; /* Показать при наведении */
   width: 8px;
-  background-color: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
+  height: 40px; /* Уменьшенная высота ползунка */
+  background-color: #000000;
   border-radius: 10px;
-  border: 2px solid #f1f1f1;
+  border-right: 1px solid white;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: #555; /* Изменение цвета при наведении */
 }
+
 .scrollable::-webkit-scrollbar {
-  display: none;
+  display: none; /* Скрыть прокрутку для элементов с классом scrollable */
+}
+
+::-webkit-scrollbar-track {
+  opacity: 0; /* Скрыть трек */
 }
 
 /* ------------------------------------------------------------------------ */
