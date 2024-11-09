@@ -146,34 +146,64 @@ select {
   overflow: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 3px; /* Фиксированная ширина */
-  opacity: 0; /* Скрыть по умолчанию */
+/* ::-webkit-scrollbar {
+  width: 3px; 
+  opacity: 0; 
   z-index: -1;
 }
 
 ::-webkit-scrollbar:hover {
-  opacity: 1; /* Показать при наведении */
+  opacity: 1; 
   width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  height: 40px; /* Уменьшенная высота ползунка */
+  min-height: 40px; 
   background-color: #000000;
-  border-radius: 10px;
+  border-radius: 20px;
   border-right: 1px solid white;
+}*/
+/* Base scrollbar styles */
+::-webkit-scrollbar {
+  width: 4px; /* Fixed width to avoid content shifting */
+  /* background-color: transparent; */
+  background-color: #ffffff;
+}
+/* ::-webkit-scrollbar:hover {
+  width: 8px;
+} */
+::-webkit-scrollbar:hover .about {
+  padding: 0;
+  margin-right: 8px;
+}
+/* Hide scrollbar by default */
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 50px;
+  /* background-color: transparent; */
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Изменение цвета при наведении */
+/* Show scrollbar on hover */
+.scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 20px;
+  border-right: 1px solid white;
+  opacity: 1;
 }
 
-.scrollable::-webkit-scrollbar {
-  display: none; /* Скрыть прокрутку для элементов с классом scrollable */
-}
-
+/* Track customization */
 ::-webkit-scrollbar-track {
-  opacity: 0; /* Скрыть трек */
+  background: transparent; /* Keeps the track hidden */
+}
+
+/* Control scrollbar thumb height */
+::-webkit-scrollbar-thumb {
+  min-height: 20px; /* Set a minimum height */
+}
+
+/* Optional: Style for scrollbar thumb on hover */
+.scrollable:hover::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 /* ------------------------------------------------------------------------ */

@@ -14,7 +14,7 @@
 }
 
 .footer__dark-mode {
-  border-top: 0.5px solid rgba(235, 235, 245, 0.6);
+  border-top: 0.5px solid rgba(235, 235, 245, 0.5);
   background-color: black;
 }
 .footer__container {
@@ -100,6 +100,7 @@
   }
   .footer__content-text {
     justify-content: start;
+    gap: 8px;
   }
   .footer__text-job {
     display: none;
