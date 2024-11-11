@@ -255,6 +255,9 @@ nav {
 .burger-menu {
   display: none;
 }
+/* .email__img:hover {
+  background-image: url("./assets/images/quadrCopyWhite.svg");
+} */
 @media screen and (max-width: 1000px) {
   .email__text,
   .email__copied,
@@ -495,6 +498,7 @@ nav {
   list-style-type: square;
   margin-left: 20px;
 }
+
 @media screen and (max-width: 768px) {
   .about__container {
     width: 90%;
@@ -509,5 +513,62 @@ nav {
   }
 }
 /* finish about ------------------------------------ */
-
+/* start approach ------------------------------------ */
+.page.approach {
+  display: flex;
+  justify-content: center;
+}
+.approach__container {
+  width: 50%;
+}
+.approach__title-container,
+.approach__rule-container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.approach__title,
+.approach__title-list,
+.approach__rule,
+.approach__rule-list {
+  width: 50%;
+}
+.approach__title-container,
+.approach__rule {
+  font-family: "HelveticaNowText";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+  color: rgba(0, 0, 0, 1);
+  /* margin-bottom: 32px; */
+}
+.approach__title-container {
+  margin-bottom: 32px;
+}
+.approach__title-list li {
+  margin-left: 20px;
+  list-style-type: square;
+}
+.approach__rule-list {
+  font-family: "HelveticaNowDisplay";
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 36px;
+  letter-spacing: -0.4px;
+  color: rgba(0, 0, 0, 1);
+}
+.approach__dark {
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .approach__container {
+    width: 90%;
+  }
+  .approach__rule-list {
+    font-size: 27px;
+    line-height: 32px;
+  }
+}
+/* finish approach ------------------------------------ */
 /* start footer ----------------------------------------- */
