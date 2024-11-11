@@ -2,13 +2,14 @@ import { useSelector } from "react-redux";
 import copyImage from "../../assets/images/copyEmail.svg";
 import copyImageDark from "../../assets/images/copyEmailDark.svg";
 import copiedV from "../../assets/images/copiedV.svg";
+import copiedVDark from "../../assets/images/copiedVDark.svg";
 import { useState } from "react";
 
 const Email = () => {
   const theme = useSelector((state) => state.mode);
   const [copied, isCopied] = useState(false);
   let imageCopy = copied ? copiedV : copyImage;
-  let imageCopyDark = copied ? copiedV : copyImageDark;
+  let imageCopyDark = copied ? copiedVDark : copyImageDark;
   function copyClipboard() {
     isCopied(true);
     const text = "sokolovski.ea@gmail.com";
