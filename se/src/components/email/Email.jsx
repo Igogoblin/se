@@ -8,8 +8,10 @@ import { useState } from "react";
 const Email = () => {
   const theme = useSelector((state) => state.mode);
   const [copied, isCopied] = useState(false);
+  // const [setHover, isHover] = useState(false);
   let imageCopy = copied ? copiedV : copyImage;
   let imageCopyDark = copied ? copiedVDark : copyImageDark;
+  // setHover(theme.theme === "dark"? );
   function copyClipboard() {
     isCopied(true);
     const text = "sokolovski.ea@gmail.com";

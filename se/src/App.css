@@ -255,6 +255,13 @@ nav {
 .burger-menu {
   display: none;
 }
+.email__img-dark {
+  background-image: url("./assets/images/copyHoverBlack.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
 /* .email__img:hover {
   background-image: url("./assets/images/quadrCopyWhite.svg");
 } */

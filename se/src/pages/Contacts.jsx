@@ -1,13 +1,11 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const Contacts = () => {
-  const theme = useSelector((state) => state.mode);
+  // const theme = useSelector((state) => state.mode);
   return (
-    <div className="page">
-      <h1 style={{ color: theme.theme === "dark" ? "white" : "black" }}>
-        {theme.language === "en" ? "Contacts" : "Страница контактов"} ...
-      </h1>
-    </div>
+    <section className="page contacts">
+      <div className="contacts__container"></div>
+    </section>
   );
 };
 
