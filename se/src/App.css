@@ -22,7 +22,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 9px;
 }
 .header__logo {
   height: 40px;
@@ -33,11 +33,12 @@
   background-size: cover;
 }
 .header__container {
-  width: 50%;
+  width: 51%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 7px;
 }
 nav {
   height: 100%;
@@ -97,10 +98,10 @@ nav {
 .nav__item.dark-theme-hover:hover::before {
   width: 100%;
 }
-.nav__item:hover .nav__link {
-  transform: rotateX(360deg);
-  /* color: #007bff; Можно изменить цвет ссылки при hover */
-}
+/* .nav__item:hover .nav__link { 
+  transform: rotateX(360deg); */
+/* color: #007bff; Можно изменить цвет ссылки при hover */
+/* } */
 /* .nav__item.dark-theme-hover:hover .nav__link {
   color: white;
 } */
@@ -198,7 +199,7 @@ nav {
   font-size: 13px;
   line-height: 12px;
   color: rgba(60, 60, 67, 0.6);
-  margin-right: 16px;
+  margin-right: 12px;
 }
 .email__dark-mode {
   color: #ebebf599;
@@ -208,11 +209,18 @@ nav {
   height: 75%;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   gap: 5px;
   margin-right: 16px;
 }
-.email__title {
+/* .email__text:hover .email__img {
+  background-image: url("./assets/images/copyHoverBlack.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 50%;
+} */
+.email .email__title {
   font-family: "HelveticaNowMicro";
   display: flex;
   align-items: center;
@@ -238,14 +246,16 @@ nav {
   transition: 0.3s;
   display: block;
 }
-.email__btn {
+button.email__btn {
   font-family: "HelveticaNowText";
   width: 59px;
   height: 28px;
   background-color: #ffffff;
   border: 1.5px solid rgba(60, 60, 67, 0.3);
   border-radius: 20px;
-  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
 .email__btn-dark {
   border-color: rgba(235, 235, 245, 0.3);
@@ -254,6 +264,13 @@ nav {
 }
 .burger-menu {
   display: none;
+}
+.email__img-dark {
+  background-image: url("./assets/images/copyHoverBlack.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
 }
 /* .email__img:hover {
   background-image: url("./assets/images/quadrCopyWhite.svg");
@@ -405,7 +422,7 @@ nav {
   );
 }
 .about__container {
-  margin-top: 87px;
+  margin-top: 90px;
   width: 50%;
   /* max-width: 748px;
   width: 100%; */
@@ -544,11 +561,40 @@ nav {
   /* margin-bottom: 32px; */
 }
 .approach__title-container {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
+}
+/* .approach__title-list li {
+  margin-left: 20px;
+  /* list-style-type: square; */
+/*} */
+.approach__title-list ul {
+  list-style: none; /* Убираем стандартные маркеры */
+  padding: 0;
 }
 .approach__title-list li {
-  margin-left: 20px;
-  list-style-type: square;
+  position: relative;
+  padding-left: 26px;
+}
+li::before {
+  width: 3px;
+  height: 3px;
+}
+.approach__title-list li::before {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 3px; /* Установите желаемый размер */
+  height: 3px; /* Установите желаемый размер */
+  background-color: black; /* Цвет квадрата */
+  margin: 3px 12px;
+  /* padding-left: 26px; */
+}
+
+.approach__title,
+.approach__rule {
+  font-family: "HelveticaNowDisplay";
 }
 .approach__rule-list {
   font-family: "HelveticaNowDisplay";
@@ -560,6 +606,12 @@ nav {
 }
 .approach__dark {
   color: white;
+}
+@media screen and (max-width: 1512px) {
+  .approach__container {
+    max-width: 748px;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .approach__container {
