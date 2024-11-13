@@ -38,6 +38,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 4px;
 }
 nav {
   height: 100%;
@@ -198,7 +199,7 @@ nav {
   font-size: 13px;
   line-height: 12px;
   color: rgba(60, 60, 67, 0.6);
-  margin-right: 16px;
+  margin-right: 12px;
 }
 .email__dark-mode {
   color: #ebebf599;
@@ -412,7 +413,7 @@ nav {
   );
 }
 .about__container {
-  margin-top: 87px;
+  margin-top: 90px;
   width: 50%;
   /* max-width: 748px;
   width: 100%; */
@@ -564,6 +565,10 @@ nav {
 .approach__title-list li {
   position: relative;
   padding-left: 26px;
+}
+li::before {
+  width: 3px;
+  height: 3px;
 }
 .approach__title-list li::before {
   position: absolute;

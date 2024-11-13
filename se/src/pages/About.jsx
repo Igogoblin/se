@@ -49,8 +49,8 @@ const About = () => {
           </div>
           <div className="about__area-place-list">
             <div className="about__area-place-title">
-              <p className="about__title-text">Product manager</p>{" "}
-              <p className="about__title-text">skills</p>
+              <p className="about__title-text">Product management</p>{" "}
+              {/* <p className="about__title-text">skills</p> */}
             </div>
             <ul className="about__list">
               {ABOUT.skills.list.map((item) => (
