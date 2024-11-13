@@ -33,7 +33,7 @@
   background-size: cover;
 }
 .header__container {
-  width: 50%;
+  width: 51%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -551,11 +551,36 @@ nav {
   /* margin-bottom: 32px; */
 }
 .approach__title-container {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
+}
+/* .approach__title-list li {
+  margin-left: 20px;
+  /* list-style-type: square; */
+/*} */
+.approach__title-list ul {
+  list-style: none; /* Убираем стандартные маркеры */
+  padding: 0;
 }
 .approach__title-list li {
-  margin-left: 20px;
-  list-style-type: square;
+  position: relative;
+  padding-left: 26px;
+}
+.approach__title-list li::before {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 3px; /* Установите желаемый размер */
+  height: 3px; /* Установите желаемый размер */
+  background-color: black; /* Цвет квадрата */
+  margin: 3px 12px;
+  /* padding-left: 26px; */
+}
+
+.approach__title,
+.approach__rule {
+  font-family: "HelveticaNowDisplay";
 }
 .approach__rule-list {
   font-family: "HelveticaNowDisplay";
@@ -567,6 +592,12 @@ nav {
 }
 .approach__dark {
   color: white;
+}
+@media screen and (max-width: 1512px) {
+  .approach__container {
+    max-width: 748px;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .approach__container {

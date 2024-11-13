@@ -16,8 +16,7 @@ const APPROACH = {
     ],
     rule: "About the customer's role in the process",
     ruleText: [
-      "The client/customer is as much a participant in the product creation process as the designer.",
-      "The client provides the designer with information: tells him about his goals, problems, tasks, how the business is organized and why it is the way it is.",
+      "The client/customer is as much a participant in the product creation process as the designer. The client provides the designer with information: tells him about his goals, problems, tasks, how the business is organized and why it is the way it is.",
       "Providing all the information requested by the designer and answering all the questions is extremely important, because it directly affects what will be done in the end.",
       "A designer is a person with certain skills and a certain mindset - he helps to achieve the desired result by analyzing the business model, market and users of the product.",
       "The designer is not clairvoyant and does not know how the business works or what goals the customer sets for himself. Therefore, immersion in the tasks, goals and problems of the customer is very important for quality results.",
