@@ -3,8 +3,8 @@ import copyImage from "../../assets/images/copyEmail.svg";
 import copyImageDark from "../../assets/images/copyEmailDark.svg";
 import copiedV from "../../assets/images/copiedV.svg";
 import copiedVDark from "../../assets/images/copiedVDark.svg";
-import copyHoverWhite from "../../assets/images/copyHoverWhite.svg";
-import copyHoverDark from "../../assets/images/copyHoverBlack.svg";
+// import copyHoverWhite from "../../assets/images/copyHoverWhite.svg";
+// import copyHoverDark from "../../assets/images/copyHoverBlack.svg";
 import { useState } from "react";
 
 const Email = () => {
@@ -22,12 +22,14 @@ const Email = () => {
       .querySelector(".email__copied")
       .classList.add("email__copied--active");
   }
-  function setHover() {
-    imageCopy = theme.theme !== "dark" && !copied ? copyHoverDark : copyImage;
-    imageCopy =
-      theme.theme === "dark" && copied ? copyHoverWhite : copyImageDark;
-    console.log("hover");
-  }
+  // function setHover() {
+  //   imageCopy = !copied ? copyHoverDark : copyImage;
+  //   console.log(imageCopy === copyHoverDark);
+  //   // imageCopy =
+  //   //   theme.theme === "dark" && copied ? copyHoverWhite : copyImageDark;
+  //   console.log("hover", copied);
+  // }
+
   return (
     <div onClick={copyClipboard} className="email">
       <div className="email__text">
@@ -35,7 +37,7 @@ const Email = () => {
           className={`email__title ${
             theme.theme === "dark" ? "email__dark-mode" : ""
           }`}
-          onMouseMove={setHover}
+          // onMouseMove={setHover}
         >
           sokolovski.ea@gmail.com{" "}
           <span
@@ -48,7 +50,10 @@ const Email = () => {
         <img
           src={theme.theme === "dark" ? imageCopyDark : imageCopy}
           alt="copy email"
-          className="email__img"
+          className={`email__img ${
+            ""
+            // theme.theme === "dark" ? "email__img-dark" : ""
+          }`}
         />
       </div>
 
