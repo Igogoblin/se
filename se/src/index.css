@@ -62,9 +62,6 @@ dl,
 dd {
   margin: 0;
 }
-html {
-  /* overflow: hidden; */
-}
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
