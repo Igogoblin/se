@@ -3,6 +3,11 @@ import local from "../assets/images/contactsPlace.svg";
 import behance from "../assets/images/behance.svg";
 import lindendin from "../assets/images/linkedin.svg";
 import dribbble from "../assets/images/dribbble.svg";
+import { useState } from "react";
+import copyImage from "../assets/images/copyEmail.svg";
+import copyImageDark from "../assets/images/copyEmailDark.svg";
+import copiedV from "../assets/images/copiedV.svg";
+import copiedVDark from "../assets/images/copiedVDark.svg";
 // import contactLogo from "../assets/images/contactsES_Logo.svg";
 const CONTACTS = {
   en: {
@@ -28,12 +33,33 @@ const CONTACTS = {
     ],
   },
 };
+
 const Contacts = () => {
   const theme = useSelector((state) => state.mode);
+  const [copied, isCopied] = useState(false);
+  function copyClipboard() {
+    isCopied(true);
+    navigator.clipboard.writeText("sokolovski.ea@gmail.com");
+  }
   return (
     <section className="contacts">
       <div className="contacts__block-one">
-        <h1>sokolovski.ea@gmail.com</h1>
+        <h1 onClick={copyClipboard}>
+          sokolovski.ea@gmail.com
+          <span className="contact__email-copied">
+            {copied && (theme.language === "en" ? "copied" : "скопировано")}
+          </span>
+          <img
+            className={`contact__email-image ${copied ? "contact__show" : ""}`}
+            src={theme.theme === "light" ? copyImage : copyImageDark}
+            alt="copy"
+          />
+          <img
+            className={`contact__email-image ${copied ? "" : "contact__show"}`}
+            src={theme.theme === "light" && copied ? copiedV : copiedVDark}
+            alt="copied"
+          />
+        </h1>
       </div>
       <div className="contacts__block-two">
         <div className="contact__title">
