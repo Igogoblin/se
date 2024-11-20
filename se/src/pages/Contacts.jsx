@@ -8,7 +8,7 @@ import copyImage from "../assets/images/copyEmail.svg";
 import copyImageDark from "../assets/images/copyEmailDark.svg";
 import copiedV from "../assets/images/copiedV.svg";
 import copiedVDark from "../assets/images/copiedVDark.svg";
-// import contactLogo from "../assets/images/contactsES_Logo.svg";
+import contactLogo from "../assets/images/contactsES_Logo.svg";
 const CONTACTS = {
   en: {
     title:
@@ -44,7 +44,10 @@ const Contacts = () => {
   return (
     <section className="contacts">
       <div className="contacts__block-one">
-        <h1 onClick={copyClipboard}>
+        <h1
+          onClick={copyClipboard}
+          className={theme.theme === "dark" ? "contacts__color-white" : ""}
+        >
           sokolovski.ea@gmail.com
           <span className="contact__email-copied">
             {copied && (theme.language === "en" ? "copied" : "скопировано")}
@@ -74,12 +77,22 @@ const Contacts = () => {
           <ul className="contact__area-list">
             {theme.language === "en"
               ? CONTACTS.en.reqList.map((item) => (
-                  <li className="contact__area-item" key={item}>
+                  <li
+                    className={`contact__area-item  ${
+                      theme.theme === "dark" ? "contacts__color-white" : ""
+                    }`}
+                    key={item}
+                  >
                     {item}
                   </li>
                 ))
               : CONTACTS.ru.reqList.map((item) => (
-                  <li className="contact__area-item" key={item}>
+                  <li
+                    className={`contact__area-item  ${
+                      theme.theme === "dark" ? "contacts__color-white" : ""
+                    }`}
+                    key={item}
+                  >
                     {item}
                   </li>
                 ))}
@@ -88,11 +101,19 @@ const Contacts = () => {
       </div>
       <div className="contacts__block-four">
         <div className="contacts__footer">
-          <div className="contacts__place">
+          <div
+            className={`contacts__place  ${
+              theme.theme === "dark" ? "contacts__color-gray" : ""
+            }`}
+          >
             <img src={local} alt="place" />
             {theme.language === "en" ? "Minsk, Belarus" : "Минск, Беларусь"}
           </div>
-          <button className="contacts__collaborate">
+          <button
+            className={`contacts__collaborate ${
+              theme.theme === "dark" ? "dark-btn" : ""
+            }`}
+          >
             {theme.language === "en" ? "Collaborate" : "Сотрудничать"}
           </button>
           <div className="contacts__social">
@@ -102,6 +123,7 @@ const Contacts = () => {
           </div>
         </div>
       </div>
+      <img src={contactLogo} alt="logo author" className="contacts__logo" />
     </section>
   );
 };
