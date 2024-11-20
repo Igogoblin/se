@@ -819,6 +819,9 @@ li::before {
   color: rgba(255, 255, 255, 1);
   border-color: rgba(235, 235, 245, 0.3);
 }
+.dark__text-color {
+  color: rgba(235, 235, 245, 0.6);
+}
 @media screen and (min-width: 1800px) {
   .contacts__block-one {
     padding: 0 0 16px 0;

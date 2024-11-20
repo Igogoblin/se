@@ -65,13 +65,21 @@ const Contacts = () => {
         </h1>
       </div>
       <div className="contacts__block-two">
-        <div className="contact__title">
+        <div
+          className={`contact__title ${
+            theme.theme === "dark" ? "dark__text-color" : ""
+          }`}
+        >
           {theme.language === "en" ? CONTACTS.en.title : CONTACTS.ru.title}
         </div>
       </div>
       <div className="contacts__block-three">
         <div className="contact__area">
-          <div className="contact__area-title">
+          <div
+            className={`contact__area-title ${
+              theme.theme === "dark" ? "dark__text-color" : ""
+            }`}
+          >
             {theme.language === "en" ? CONTACTS.en.req : CONTACTS.ru.req}
           </div>
           <ul className="contact__area-list">
