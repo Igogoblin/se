@@ -8,7 +8,7 @@ import copyImage from "../assets/images/copyEmail.svg";
 import copyImageDark from "../assets/images/copyEmailDark.svg";
 import copiedV from "../assets/images/copiedV.svg";
 import copiedVDark from "../assets/images/copiedVDark.svg";
-// import contactLogo from "../assets/images/contactsES_Logo.svg";
+import contactLogo from "../assets/images/contactsES_Logo.svg";
 const CONTACTS = {
   en: {
     title:
@@ -102,6 +102,7 @@ const Contacts = () => {
           </div>
         </div>
       </div>
+      <img src={contactLogo} alt="logo author" className="contacts__logo" />
     </section>
   );
 };

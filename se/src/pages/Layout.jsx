@@ -10,8 +10,6 @@ const Layout = () => {
   const activeLink = "nav__link nav__link--active";
   const normalLink = "nav__link";
   const activeLinkDark = "nav__link nav__link--dark";
-  // const forLightMode = "header__light-mode";
-  // const forDarkMode = "header__dark-mode";
   const theme = useSelector((state) => state.mode);
 
   return (
@@ -35,13 +33,6 @@ const Layout = () => {
             <li className="nav__item">
               <NavLink
                 to={"/about"}
-                // className={({ isActive }) =>
-                //   isActive
-                //     ? theme.theme === "dark"
-                //       ? activeLinkDark
-                //       : activeLink
-                //     : normalLink
-                // }
                 className={({ isActive }) => {
                   const baseClass = isActive
                     ? theme.theme === "dark"
@@ -59,13 +50,6 @@ const Layout = () => {
             <li className="nav__item">
               <NavLink
                 to={"/approach"}
-                // className={({ isActive }) =>
-                //   isActive
-                //     ? theme.theme === "dark"
-                //       ? activeLinkDark
-                //       : activeLink
-                //     : normalLink
-                // }
                 className={({ isActive }) => {
                   const baseClass = isActive
                     ? theme.theme === "dark"
@@ -83,13 +67,6 @@ const Layout = () => {
             <li className="nav__item">
               <NavLink
                 to={"/contacts"}
-                // className={({ isActive }) =>
-                //   isActive
-                //     ? theme.theme === "dark"
-                //       ? activeLinkDark
-                //       : activeLink
-                //     : normalLink
-                // }
                 className={({ isActive }) => {
                   const baseClass = isActive
                     ? theme.theme === "dark"
