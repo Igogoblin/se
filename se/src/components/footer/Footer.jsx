@@ -33,16 +33,18 @@ const Footer = () => {
               theme.theme === "dark" ? "footer__img-opacity" : ""
             }`}
             alt="logo author"
-            // style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
           />
-          <div className="footer__content-text">
+          <div
+            className={`footer__content-text ${
+              theme.language === "ru" ? "text__ru-footer" : ""
+            }`}
+          >
             <img
               src={theme.theme === "dark" ? copyrightDark : copyright}
               className={`footer__img footer__copyright" ${
                 theme.theme === "dark" ? "footer__img-opacity" : ""
               }`}
               alt="copyright"
-              // style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
             />
             <p
               className={`footer__text ${
@@ -50,7 +52,6 @@ const Footer = () => {
                   ? "footer__content-dark footer__text-opacity"
                   : ""
               }`}
-              // style={theme.theme === "dark" ? { opacity: 0.6 } : { opacity: 1 }}
             >
               <span className="footer__text-name">
                 {theme.language === "en"

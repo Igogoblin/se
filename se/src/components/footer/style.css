@@ -89,7 +89,11 @@
   line-height: 12px;
   color: rgba(60, 60, 67, 0.6);
 }
-
+.text__ru-footer {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.25px;
+}
 @media screen and (max-width: 768px) {
   /* .footer {
     height: 48px;
