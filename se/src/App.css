@@ -255,10 +255,10 @@ button.email__btn {
   font-size: 14px;
   line-height: 16px;
 }
-.email__btn-dark {
+.email__btn.email__btn-dark {
   border-color: rgba(235, 235, 245, 0.3);
-  color: #ffffff;
   background-color: #000000;
+  color: rgba(255, 255, 255, 1);
 }
 .burger-menu {
   display: none;
@@ -807,6 +807,17 @@ li::before {
   transform: translateX(-50%);
   margin: 0 auto;
   z-index: -1;
+}
+.contacts__color-white {
+  color: rgba(255, 255, 255, 1);
+}
+.contacts__color-gray {
+  color: rgba(235, 235, 245, 0.6);
+}
+.dark-btn {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(235, 235, 245, 0.3);
 }
 @media screen and (min-width: 1800px) {
   .contacts__block-one {
