@@ -95,12 +95,8 @@
   letter-spacing: 0.25px;
 }
 @media screen and (max-width: 768px) {
-  /* .footer {
-    height: 48px;
-  } */
   .footer__content {
     justify-content: start;
-    /* gap: 10px; */
   }
   .footer__content-text {
     justify-content: start;
@@ -123,5 +119,10 @@
   .footer__buttons,
   .footer__text-name {
     display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer__container {
+    width: 50%;
   }
 }
