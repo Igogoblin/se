@@ -89,14 +89,14 @@
   line-height: 12px;
   color: rgba(60, 60, 67, 0.6);
 }
-
+.text__ru-footer {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.25px;
+}
 @media screen and (max-width: 768px) {
-  /* .footer {
-    height: 48px;
-  } */
   .footer__content {
     justify-content: start;
-    /* gap: 10px; */
   }
   .footer__content-text {
     justify-content: start;
@@ -119,5 +119,10 @@
   .footer__buttons,
   .footer__text-name {
     display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer__container {
+    width: 50%;
   }
 }
