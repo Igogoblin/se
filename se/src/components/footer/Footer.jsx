@@ -18,7 +18,11 @@ const Footer = () => {
           <Mode />
         </div>
 
-        <div className="footer__content">
+        <div
+          className={`footer__content ${
+            theme.language === "ru" ? "footer__content-ru" : ""
+          }`}
+        >
           <img
             src={theme.theme === "dark" ? esDark : esGray}
             className={`footer__img footer__content-logo ${
@@ -28,7 +32,7 @@ const Footer = () => {
           />
           <div
             className={`footer__content-text ${
-              theme.language === "ru" ? "text__ru-footer" : ""
+              theme.language === "ru" ? "footer__content-text-ru" : ""
             }`}
           >
             <img
@@ -43,7 +47,7 @@ const Footer = () => {
                 theme.theme === "dark"
                   ? "footer__content-dark footer__text-opacity"
                   : ""
-              }`}
+              } ${theme.language === "ru" ? "footer__text-ru" : ""}`}
             >
               <span className="footer__text-name">
                 {theme.language === "en"
@@ -65,8 +69,8 @@ const Footer = () => {
           theme.language === "ru" ? "text__ru-footer" : ""
         }`}
       >
-        {theme.language === "en" ? "Code" : "Код"}{" "}
-        <span>{theme.language === "en" ? "Ihar Skavysh" : "Игорь Скавыш"}</span>
+        <span>{theme.language === "en" ? "Code" : "Код"}</span>
+        <span>{theme.language === "en" ? "Skavysh Ihar" : "Скавыш Игорь"}</span>
       </div>
     </footer>
   );
