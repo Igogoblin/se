@@ -17,7 +17,8 @@
 }
 
 .header__logo-container {
-  width: 50%;
+  /* width: 50%; */
+  width: calc(50% - 2px);
   height: 100%;
   display: flex;
   justify-content: start;
@@ -34,7 +35,8 @@
   margin-left: 8px;
 }
 .header__container {
-  width: 50%;
+  /* width: 50%; */
+  width: calc(50% + 2px);
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -191,7 +193,7 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   position: relative;
   font-weight: 400;
   font-size: 13px;

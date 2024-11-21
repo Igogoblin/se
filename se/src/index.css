@@ -29,7 +29,7 @@
 }
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("./assets/fonts/HelveticaNeueCyr-Medium.otf") format("opentype");
+  src: url("./assets/fonts/HelveticaNeueCyr-Roman.otf") format("opentype");
 }
 body {
   font-family: "HelveticaNowText", sans-serif; /* Статичный шрифт */
