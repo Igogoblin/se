@@ -297,13 +297,14 @@ button.email__btn {
   }
   .burger-menu {
     display: block;
-    margin-right: 16px;
+    margin-right: 17px;
+    /* исправлено 22.11 чтобы сместить на один пиксель левее */
   }
 }
 /* burger menu -------------------------------------- */
 .burger-icon {
   width: 18px;
-  height: 10px;
+  height: 9.5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
