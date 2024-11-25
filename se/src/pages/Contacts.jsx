@@ -125,9 +125,18 @@ const Contacts = () => {
             {theme.language === "en" ? "Collaborate" : "Сотрудничать"}
           </button>
           <div className="contacts__social">
-            <img src={behance} alt="behance" className="contacts__behance" />
-            <img src={lindendin} alt="linkedin" />
-            <img src={dribbble} alt="dribbble" />
+            <a href="https://www.behance.net/eugenesokolovski" target="_blank">
+              <img src={behance} alt="behance" className="contacts__behance" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eugene-sokolovski/"
+              target="_blank"
+            >
+              <img src={lindendin} alt="linkedin" />
+            </a>
+            <a href="https://dribbble.com/eugenesokolovski" target="_blank">
+              <img src={dribbble} alt="dribbble" />
+            </a>
           </div>
         </div>
       </div>

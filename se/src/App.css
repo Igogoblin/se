@@ -290,6 +290,7 @@ button.email__btn {
   }
   .email {
     width: 86px;
+    justify-content: end;
   }
 }
 @media screen and (max-width: 600px) {
@@ -372,6 +373,7 @@ button.email__btn {
 }
 .menu.open {
   right: 0;
+  text-align: center;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -397,7 +399,42 @@ button.email__btn {
 }
 
 /* finish burger menu ----------- */
-
+/* start main page ---------------------------------------------------------- */
+.wrapper {
+  max-width: calc(100vw - 32px);
+  width: 100%;
+  height: 100%;
+  padding-top: 64px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.main__head {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+/* .main__head div {
+  width: 20%;
+} */
+.head-awards {
+  display: flex;
+  justify-content: end;
+}
+.head-awards__block {
+  display: flex;
+  width: 108px;
+  height: 108px;
+  /* padding: 4px 8px 8px 8px; */
+  /* flex-direction: column;
+  align-items: flex-start;
+  gap: 4px; */
+  border-radius: 12px;
+  background: rgba(118, 118, 128, 0.12);
+}
+/* finish main page ---------------------------------------------------------- */
 /* start about -------------------------------------- */
 .about {
   position: relative;
@@ -569,6 +606,7 @@ button.email__btn {
   color: rgba(0, 0, 0, 1);
   /* margin-bottom: 32px; */
 }
+
 .approach__title-container {
   margin-bottom: 16px;
 }
@@ -613,10 +651,11 @@ li::before {
   letter-spacing: -0.4px;
   color: rgba(0, 0, 0, 1);
 }
-.approach__dark {
+.approach__dark .approach__title-container,
+.approach__dark .approach__rule,
+.approach__dark .approach__rule-list {
   color: white;
 }
-
 @media screen and (max-width: 1512px) {
   .approach__container {
     max-width: 748px;

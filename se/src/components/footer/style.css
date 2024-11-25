@@ -142,7 +142,7 @@
   letter-spacing: 0.45px;
   color: rgba(0, 0, 0, 1);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 840px) {
   .footer__content {
     justify-content: start;
   }
@@ -163,7 +163,7 @@
     /* margin: 0 4px; */
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 605px) {
   .footer__buttons,
   .footer__text-name {
     display: none;

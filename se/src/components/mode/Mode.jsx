@@ -38,7 +38,7 @@ const Mode = () => {
       <div
         className={`mode__language ${
           theme.theme === "dark" ? "mode__language-dark" : ""
-        }`}
+        } ${theme.language === "ru" ? "mode__language-ru" : ""}`}
         onClick={() => changeLanguage(isMode ? "ru" : "en")}
       >
         <div

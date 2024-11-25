@@ -47,7 +47,9 @@ const Footer = () => {
                 theme.theme === "dark"
                   ? "footer__content-dark footer__text-opacity"
                   : ""
-              } ${theme.language === "ru" ? "footer__text-ru" : ""}`}
+              } ${
+                theme.language === "ru" ? "footer__text-ru padding-top" : ""
+              }`}
             >
               <span className="footer__text-name">
                 {theme.language === "en"
@@ -66,7 +68,7 @@ const Footer = () => {
       </div>
       <div
         className={`footer__coder ${theme.theme === "dark" ? "coder" : ""} ${
-          theme.language === "ru" ? "text__ru-footer" : ""
+          theme.language === "ru" ? "text__ru-footer padding-top" : ""
         }`}
       >
         <span>{theme.language === "en" ? "Code" : "Код"}</span>
