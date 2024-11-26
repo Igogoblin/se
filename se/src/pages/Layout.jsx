@@ -28,7 +28,7 @@ const Layout = () => {
           <ul
             className={`nav ${
               theme.theme === "dark" ? " header__dark-mode" : ""
-            } ${theme.language === "ru" ? "padding-top" : ""}`}
+            } ${theme.language === "ru" ? "padding-top footer-text-gap" : ""}`}
           >
             <li className="nav__item">
               <NavLink

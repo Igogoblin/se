@@ -66,14 +66,28 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div
-        className={`footer__coder ${theme.theme === "dark" ? "coder" : ""} ${
-          theme.language === "ru" ? "text__ru-footer padding-top" : ""
-        }`}
-      >
-        <span>{theme.language === "en" ? "Code" : "Код"}</span>
-        <span>{theme.language === "en" ? "Skavysh Ihar" : "Скавыш Игорь"}</span>
-      </div>
+      <a href="https://igogoblin.github.io/portfolio/" target="_blank">
+        <div
+          className={`footer__coder ${theme.theme === "dark" ? "coder" : ""} ${
+            theme.language === "ru" ? "text__ru-footer padding-top" : ""
+          }`}
+        >
+          <span
+            className={`${
+              theme.theme === "dark" ? "footer__content-dark" : ""
+            }`}
+          >
+            {theme.language === "en" ? "Code" : "Код"}
+          </span>
+          <span
+            className={`${
+              theme.theme === "dark" ? "footer__content-dark-white" : ""
+            }`}
+          >
+            {theme.language === "en" ? "Ihar Skavysh" : "Игорь Скавыш"}
+          </span>
+        </div>
+      </a>
     </footer>
   );
 };
