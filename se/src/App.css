@@ -267,6 +267,7 @@ button.email__btn {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  color: rgba(0, 0, 0, 1);
 }
 .email__btn.email__btn-dark {
   border-color: rgba(235, 235, 245, 0.3);
@@ -345,6 +346,9 @@ button.email__btn {
 
 .burger-icon.open .bar:nth-child(3) {
   transform: rotate(-45deg) translate(1px, -1px);
+}
+.burger-icon.open {
+  margin-bottom: 6px;
 }
 .burger-menu__mode {
   width: 100%;
@@ -630,6 +634,7 @@ li::before {
   width: 3px;
   height: 3px;
 }
+
 .approach__title-list li::before {
   position: absolute;
   top: 6px;
@@ -642,7 +647,9 @@ li::before {
   margin: 3px 12px;
   /* padding-left: 26px; */
 }
-
+.approach__dark li::before {
+  background-color: white;
+}
 .approach__title,
 .approach__rule {
   font-family: "HelveticaNowDisplay";
@@ -788,7 +795,9 @@ li::before {
   top: 7px;
   left: 3px;
 }
-
+li.contact__area-item.contacts__color-white::before {
+  background-color: #fff;
+}
 .contact__area-item {
   list-style-type: square;
   font-family: "HelveticaNowText";
@@ -863,6 +872,7 @@ li::before {
 }
 .contacts__color-white {
   color: rgba(255, 255, 255, 1);
+  text-decoration: none;
 }
 .contacts__color-gray {
   color: rgba(235, 235, 245, 0.6);
@@ -875,6 +885,10 @@ li::before {
 .dark__text-color {
   color: rgba(235, 235, 245, 0.6);
 }
+.dark__text-color .contact__area-list li::before {
+  background-color: #fff;
+}
+
 @media screen and (min-width: 1800px) {
   .contacts__block-one {
     padding: 0 0 16px 0;
@@ -980,8 +994,8 @@ li::before {
     width: 97px;
   }
   .contacts__social img {
-    width: 28px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
   }
   .contacts__logo {
     top: 30%;
@@ -1059,5 +1073,25 @@ li::before {
   .contact__area-list li::before {
     top: 7px;
     left: 3px;
+  }
+}
+@media screen and (max-height: 580px) {
+  .contacts {
+    height: 110vh;
+  }
+}
+@media screen and (max-height: 540px) {
+  .contacts {
+    height: 120vh;
+  }
+}
+@media screen and (max-height: 480px) {
+  .contacts {
+    height: 130vh;
+  }
+}
+@media screen and (max-height: 440px) {
+  .contacts {
+    height: 140vh;
   }
 }
