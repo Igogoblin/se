@@ -25,7 +25,7 @@
   position: relative;
 }
 .mode__language .language {
-  padding: 5px 2px 2px 1px;
+  padding: 3px 2px 2px 1px;
   font-family: "HelveticaNowMicro";
 }
 .mode__language-dark {

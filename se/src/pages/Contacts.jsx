@@ -11,8 +11,9 @@ import copiedVDark from "../assets/images/copiedVDark.svg";
 import contactLogo from "../assets/images/contactsES_Logo.svg";
 const CONTACTS = {
   en: {
-    title:
-      "The more detailed you are about your problems/goals — the better and faster you will get results",
+    title1:
+      "The more detailed you are about your problems/goals — the better and faster ",
+    title2: "you will get results",
     req: "In your letter, please describe",
     reqList: [
       "What you want to do and why?",
@@ -22,8 +23,9 @@ const CONTACTS = {
     ],
   },
   ru: {
-    title:
+    title1:
       "Чем подробнее вы расскажете о своих проблемах/целях, тем лучше и быстрее вы получите результат",
+    title2: "вы получите результат",
     req: "В своем письме, пожалуйста, расскажите",
     reqList: [
       "Что вы хотите сделать и почему?",
@@ -70,7 +72,13 @@ const Contacts = () => {
             theme.theme === "dark" ? "dark__text-color" : ""
           }`}
         >
-          {theme.language === "en" ? CONTACTS.en.title : CONTACTS.ru.title}
+          <span>
+            {theme.language === "en" ? CONTACTS.en.title1 : CONTACTS.ru.title1}
+          </span>
+
+          <p className="contact__title-span">
+            {theme.language === "en" ? CONTACTS.en.title2 : CONTACTS.ru.title2}
+          </p>
         </div>
       </div>
       <div className="contacts__block-three">
@@ -112,7 +120,7 @@ const Contacts = () => {
           <div
             className={`contacts__place  ${
               theme.theme === "dark" ? "contacts__color-gray" : ""
-            }`}
+            } ${theme.language === "ru" ? "contacts__place-ru" : ""}`}
           >
             <img src={local} alt="place" />
             {theme.language === "en" ? "Minsk, Belarus" : "Минск, Беларусь"}

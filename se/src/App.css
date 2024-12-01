@@ -70,6 +70,9 @@ nav {
   display: flex;
   align-items: center;
 }
+.header-tex-gap {
+  gap: 14px;
+}
 .footer-text-gap {
   justify-content: start;
   gap: 12px;
@@ -81,7 +84,7 @@ nav {
   color: #000000;
 }
 .padding-top {
-  padding-top: 1px;
+  padding-top: 1.5px;
 }
 /* для hover ссылок --------*/
 .nav__item {
@@ -363,7 +366,7 @@ button.email__btn {
 /* Скрытое меню ------------------------- */
 .menu {
   position: fixed;
-  top: 49px;
+  top: 48px;
   right: -100%;
   /* bottom: 48px; */
   height: calc(100vh - 49px-48px);
@@ -375,6 +378,7 @@ button.email__btn {
   align-items: center;
   transition: right 0.3s ease;
   z-index: 1;
+  padding-top: 44px;
 }
 .menu-dark {
   background-color: #000000;
@@ -390,10 +394,12 @@ button.email__btn {
 .menu ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .menu ul li {
-  margin: 20px 0;
+  margin: 32px 0;
+  /* gap: 32px; */
 }
 
 .menu ul li a {
@@ -424,12 +430,75 @@ button.email__btn {
   justify-content: space-between;
   /* border: 1px solid black; */
 }
-/* .main__head div {
-  width: 20%;
-} */
+.main__head-dark,
+.main__head-dark p {
+  color: rgba(255, 255, 255, 1);
+}
+.head-user {
+  display: flex;
+  justify-content: start;
+  gap: 4px;
+}
+.head-user img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.head-user__block {
+  display: flex;
+  flex-direction: column;
+}
+.head-user span {
+  font-family: "HelveticaNowVar";
+  font-weight: 552;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -2px;
+  color: rgba(0, 0, 0, 1);
+  transform: rotateY(180deg);
+  display: inline-block;
+}
+.head-user p {
+  font-family: "HelveticaNowVar";
+  font-weight: 552;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: rgba(0, 0, 0, 1);
+}
 .head-awards {
   display: flex;
   justify-content: end;
+}
+.head-profession {
+  font-family: "HelveticaNowDisplay";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  /* letter-spacing: -1px; */
+  color: rgba(60, 60, 67, 1);
+}
+.head-work {
+  display: flex;
+  flex-direction: column;
+}
+.head-work span:nth-child(1),
+.head-services span:nth-child(1) {
+  font-family: "HelveticaNowText";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  /* letter-spacing: 0.25px; */
+  color: rgba(60, 60, 67, 0.6);
+}
+.head-work span:nth-child(2),
+.head-services li {
+  font-family: "HelveticaNowText";
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  /* letter-spacing: 0.25px; */
+  color: rgba(0, 0, 0, 1);
 }
 .head-awards__block {
   display: flex;
@@ -712,6 +781,7 @@ li::before {
   letter-spacing: -1.96px;
   text-align: center;
   position: relative;
+  text-decoration: none;
 }
 .contact__email-copied {
   font-family: "HelveticaNowMicro";
@@ -797,6 +867,7 @@ li::before {
 }
 li.contact__area-item.contacts__color-white::before {
   background-color: #fff;
+  text-decoration: none;
 }
 .contact__area-item {
   list-style-type: square;
@@ -813,20 +884,20 @@ li.contact__area-item.contacts__color-white::before {
   height: 25%;
   display: flex;
   align-items: end;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 }
 .contacts__footer {
   padding: 0 16px 0 13px;
   /* bottom: 32px; */
   width: 100%;
-  height: 25%;
+  /* height: 25%; */
   display: flex;
   justify-content: space-between;
   align-items: end;
   padding-bottom: 16px;
 }
 .contacts__place {
-  width: 107px;
+  width: 111px;
   height: 24px;
   display: flex;
   justify-content: space-between;
@@ -835,6 +906,7 @@ li.contact__area-item.contacts__color-white::before {
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
+  gap: 4px;
 }
 .contacts__collaborate {
   width: 181px;
@@ -856,7 +928,9 @@ li.contact__area-item.contacts__color-white::before {
   width: 85px;
   height: 24px;
 }
-.contacts__behance {
+.contacts__social .contacts__behance {
+  width: 21px;
+  height: 21px;
   padding-left: 2px;
 }
 .contacts__logo {
@@ -888,7 +962,17 @@ li.contact__area-item.contacts__color-white::before {
 .dark__text-color .contact__area-list li::before {
   background-color: #fff;
 }
-
+.contact__title-span {
+  display: block;
+}
+.contacts__place-ru {
+  width: 128px;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 109.091% */
+  letter-spacing: 0.7px;
+}
 @media screen and (min-width: 1800px) {
   .contacts__block-one {
     padding: 0 0 16px 0;
@@ -921,6 +1005,7 @@ li.contact__area-item.contacts__color-white::before {
     top: 10%;
   }
 }
+
 @media screen and (max-width: 1400px) {
   .contact__area-item {
     padding-right: 16px;
@@ -993,9 +1078,14 @@ li.contact__area-item.contacts__color-white::before {
   .contacts__social {
     width: 97px;
   }
+  .contacts__social .contacts__behance {
+    width: 24px;
+    height: 24px;
+    margin: 2px 0 0 4px;
+  }
   .contacts__social img {
-    width: 18px;
-    height: 18px;
+    width: 21px;
+    height: 21px;
   }
   .contacts__logo {
     top: 30%;
@@ -1025,6 +1115,39 @@ li.contact__area-item.contacts__color-white::before {
     padding: 0 16px;
   }
 }
+@media screen and (max-width: 500px) {
+  .contacts {
+    min-height: 720px;
+  }
+  .contacts__block-three {
+    height: 35%;
+    padding: 5px 0 0 0;
+  }
+  .contacts__block-four {
+    height: 15%;
+    padding: 0;
+    margin: auto 0 48px 0;
+  }
+  .contacts__footer {
+    position: relative;
+    height: 128px;
+  }
+  .contacts__place,
+  .contacts__social {
+    height: 28px;
+  }
+  .contacts__collaborate {
+    /* width: 201px; */
+    position: absolute;
+    /* margin-bottom: 54px; */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 400px) {
   .contacts__block-one {
     height: 21%;
@@ -1036,7 +1159,7 @@ li.contact__area-item.contacts__color-white::before {
     letter-spacing: -0.2px;
   }
   .contact__email-image {
-    bottom: 3px;
+    bottom: 6px;
     right: -30px;
   }
   .contact__email-copied {
@@ -1046,23 +1169,18 @@ li.contact__area-item.contacts__color-white::before {
   .contacts__block-two {
     padding: 0;
   }
-  .contacts__block-three {
-    padding: 5px 0 0 0;
-  }
+
   .contact__area-list {
     padding: 0 0 0 16px;
   }
-  .contacts__block-four {
-    height: 15%;
-    padding: 0;
-  }
+
   .contacts__place {
-    width: 110px;
+    width: 111px;
   }
   .contacts__collaborate {
     width: 181px;
     height: 56px;
-    margin-bottom: 36px;
+    margin-top: 29px;
   }
   .contacts__footer {
     padding: 0 16px;
@@ -1073,6 +1191,9 @@ li.contact__area-item.contacts__color-white::before {
   .contact__area-list li::before {
     top: 7px;
     left: 3px;
+  }
+  .contacts__place-ru {
+    width: 130px;
   }
 }
 @media screen and (max-height: 580px) {
