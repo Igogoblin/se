@@ -24,8 +24,9 @@
   padding: 2px;
   position: relative;
 }
-.mode__language-ru {
-  padding: 5px 2px 2px 1px;
+.mode__language .language {
+  padding: 3px 2px 2px 1px;
+  font-family: "HelveticaNowMicro";
 }
 .mode__language-dark {
   background: rgba(190, 192, 194, 0.29);
