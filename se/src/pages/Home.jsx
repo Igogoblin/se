@@ -46,7 +46,7 @@ const Home = () => {
             theme.theme === "dark" ? "main__head-dark" : ""
           }`}
         >
-          <div className="head-user">
+          {/* <div className="head-user">
             <img src={photo} alt="author" />
             <div className="head-user__block">
               <p>
@@ -88,10 +88,10 @@ const Home = () => {
                     <li key={index}>{item}</li>
                   ))}
             </ul>
-          </div>
-          <div className="head-awards">
+          </div> */}
+          {/* <div className="head-awards">
             <div className="head-awards__block"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </main>
