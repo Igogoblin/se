@@ -53,23 +53,23 @@ const Home = () => {
     setPage(!isPage);
   }
   return (
-    <main>
+    <main id={`${theme.theme === "dark" ? "main__dark" : ""}`}>
       <div className="wrapper">
         <div
-          className={`main__head ${
-            theme.theme === "dark" ? "main__head-dark" : ""
-          }`}
+          className={`main__head ${theme.theme === "dark" ? "text-white" : ""}`}
         >
           <div className="main__header">
             <div className="head-user">
               <img src={photo} alt="author" />
               <div
                 className={`head-user__block ${
-                  theme.language === "ru" ? "head-user__block-ru" : ""
+                  theme.theme === "dark" ? "text-white" : ""
                 }`}
               >
                 <div className="head-user__block-name">
-                  <span>3</span>
+                  <span className={theme.theme === "dark" ? "text-white" : ""}>
+                    3
+                  </span>
                   {theme.language === "en" ? HOME.en.name : HOME.ru.name}
                 </div>
                 <div className="head-user__block-surname">
@@ -85,9 +85,13 @@ const Home = () => {
                 <div className="be__block">
                   <div className="be__block-header">
                     <img src={behance} alt="behance" />
-                    <span>{AWARDS.behance}</span>
+                    <span
+                      className={theme.theme === "dark" ? "text-white" : ""}
+                    >
+                      {AWARDS.behance}
+                    </span>
                   </div>
-                  <p>
+                  <p className={theme.theme === "dark" ? "text-gray" : ""}>
                     {theme.language === "en"
                       ? "Behance awards"
                       : "Behance призы"}
@@ -119,7 +123,7 @@ const Home = () => {
             <div
               className={`head-profession ${
                 theme.language === "ru" ? "head-profession-ru" : ""
-              }`}
+              } ${theme.theme === "dark" ? "text-gray" : ""}`}
             >
               {theme.language === "en"
                 ? HOME.en.headProfession
@@ -127,22 +131,22 @@ const Home = () => {
             </div>
             <div className="main__info-approach">
               <div className="head-work">
-                <span>
+                <span className={theme.theme === "dark" ? "text-gray" : ""}>
                   {theme.language === "en"
                     ? HOME.en.headWork
                     : HOME.ru.headWork}
                 </span>
-                <span>
+                <span className={theme.theme === "dark" ? "text-white" : ""}>
                   {theme.language === "en"
                     ? HOME.en.headWorkList
                     : HOME.ru.headWorkList}
                 </span>
               </div>
               <div className="head-services">
-                <span>
+                <span className={theme.theme === "dark" ? "text-gray" : ""}>
                   {theme.language === "en" ? HOME.en.service : HOME.ru.service}
                 </span>
-                <ul>
+                <ul className={theme.theme === "dark" ? "text-white" : ""}>
                   {theme.language === "en"
                     ? HOME.en.servicesList.map((item, index) => (
                         <li key={index}>{item}</li>
