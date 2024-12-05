@@ -106,10 +106,14 @@ const Home = () => {
                 </div>
                 <div className="award__slide">
                   <div
-                    className={`point ${isPage ? "point-active" : ""}`}
+                    className={`point ${isPage ? "point-active" : ""} ${
+                      isPage && theme.theme === "dark" ? "bg-white" : "bg-gray"
+                    }`}
                   ></div>
                   <div
-                    className={`point ${isPage ? "" : "point-active"}`}
+                    className={`point ${isPage ? "" : "point-active"} ${
+                      isPage && theme.theme === "dark" ? "bg-gray" : "bg-white"
+                    }`}
                   ></div>
                 </div>
                 <div className="award__slide-place" onClick={showPage}>

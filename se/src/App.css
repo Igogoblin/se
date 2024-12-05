@@ -414,6 +414,10 @@ button.email__btn {
 
 /* finish burger menu ----------- */
 /* start main page ---------------------------------------------------------- */
+/* main {
+  width: 100%;
+  height: 90vh;
+} */
 .wrapper {
   max-width: calc(100vw - 32px);
   width: 100%;
@@ -528,6 +532,7 @@ button.email__btn {
   position: absolute;
   top: 0;
   right: -108px;
+  gap: 8px;
 }
 .head-services ul {
   margin: 8px 0 0 0;
@@ -561,7 +566,9 @@ button.email__btn {
   border-radius: 12px;
   background: rgba(118, 118, 128, 0.12);
 }
-
+#main__dark .head-awards__block {
+  background-color: rgba(190, 192, 194, 0.29);
+}
 .be__block {
   margin: 8px 8px 0 8px;
   display: flex;
@@ -719,7 +726,7 @@ button.email__btn {
     flex-direction: row;
   }
   .head-services span:nth-child(1) {
-    /* margin: 0 auto; */
+    width: 120px;
     text-align: center;
     padding-right: 23px;
   }
@@ -727,6 +734,8 @@ button.email__btn {
 @media screen and (max-width: 400px) {
   .head-work {
     margin: 12px 0 6px 0;
+  }
+  .head-services span:nth-child(1) {
   }
 }
 @media screen and (max-width: 345px) {
@@ -738,6 +747,7 @@ button.email__btn {
     line-height: 24px; /* 120% */
     letter-spacing: -0.55px;
   }
+
   .head-profession.head-profession-ru {
     font-size: 24px;
     font-style: normal;
@@ -755,7 +765,12 @@ button.email__btn {
 #main__dark .text-gray {
   color: rgba(235, 235, 245, 0.6);
 }
-
+#main__dark .bg-white {
+  background-color: rgba(255, 255, 255, 1);
+}
+#main__dark .bg-gray {
+  background-color: rgba(235, 235, 245, 0.6);
+}
 /* finish main page ---------------------------------------------------------- */
 /* start about -------------------------------------- */
 .about {
