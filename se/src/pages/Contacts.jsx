@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import local from "../assets/images/contactsPlace.svg";
+import localDark from "../assets/images/contactPlaceDark.svg";
 import behance from "../assets/images/behance.svg";
 import lindendin from "../assets/images/linkedin.svg";
 import dribbble from "../assets/images/dribbble.svg";
@@ -122,7 +123,7 @@ const Contacts = () => {
               theme.theme === "dark" ? "contacts__color-gray" : ""
             } ${theme.language === "ru" ? "contacts__place-ru" : ""}`}
           >
-            <img src={local} alt="place" />
+            <img src={theme.theme === "dark" ? localDark : local} alt="place" />
             {theme.language === "en" ? "Minsk, Belarus" : "Минск, Беларусь"}
           </div>
           <button

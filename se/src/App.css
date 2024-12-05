@@ -651,6 +651,7 @@ button.email__btn {
 .slide-place-right:hover {
   cursor: url("./assets/images/cursorRight.svg"), auto;
 }
+
 @media screen and (max-width: 1000px) {
   .main__head {
     flex-direction: column;
@@ -745,6 +746,16 @@ button.email__btn {
     letter-spacing: -0.34px;
   }
 }
+#main__dark .text-white {
+  color: rgba(255, 255, 255, 1);
+}
+#main__dark .text-white > * {
+  color: rgba(255, 255, 255, 1);
+}
+#main__dark .text-gray {
+  color: rgba(235, 235, 245, 0.6);
+}
+
 /* finish main page ---------------------------------------------------------- */
 /* start about -------------------------------------- */
 .about {
