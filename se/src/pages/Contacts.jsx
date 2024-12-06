@@ -25,7 +25,7 @@ const CONTACTS = {
   },
   ru: {
     title1:
-      "Чем подробнее вы расскажете о своих проблемах/целях, тем лучше и быстрее вы получите результат",
+      "Чем подробнее вы расскажете о своих проблемах/целях, тем лучше и быстрее",
     title2: "вы получите результат",
     req: "В своем письме, пожалуйста, расскажите",
     reqList: [
@@ -61,7 +61,9 @@ const Contacts = () => {
             alt="copy"
           />
           <img
-            className={`contact__email-image ${copied ? "" : "contact__show"}`}
+            className={`contact__email-image  contact__show-correct${
+              copied ? "" : "contact__show"
+            }`}
             src={theme.theme === "light" && copied ? copiedV : copiedVDark}
             alt="copied"
           />
