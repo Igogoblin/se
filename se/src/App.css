@@ -1113,7 +1113,7 @@ li::before {
   align-items: center;
 }
 .contact__title {
-  max-width: 940px;
+  /* max-width: 940px; */
   width: 100%;
   font-family: "HelveticaNowDisplay";
   font-weight: 400;
@@ -1317,7 +1317,7 @@ li.contact__area-item.contacts__color-white::before {
     top: 15%;
   }
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1070px) {
   .contacts__block-one h1 {
     max-width: 558px;
     font-size: 54.53px;
