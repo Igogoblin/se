@@ -53,7 +53,10 @@ const Home = () => {
     setPage(!isPage);
   }
   return (
-    <main id={`${theme.theme === "dark" ? "main__dark" : ""}`}>
+    <main
+      id={`${theme.theme === "dark" ? "main__dark" : ""}`}
+      className={theme.language === "ru" ? "ru__content" : ""}
+    >
       <div className="wrapper">
         <div
           className={`main__head ${theme.theme === "dark" ? "text-white" : ""}`}
@@ -92,9 +95,13 @@ const Home = () => {
                     </span>
                   </div>
                   <p className={theme.theme === "dark" ? "text-gray" : ""}>
-                    {theme.language === "en"
-                      ? "Behance awards"
-                      : "Behance призы"}
+                    {theme.language === "en" ? (
+                      "Behance awards"
+                    ) : (
+                      <>
+                        Behance <span className="awards__ru">призы</span>
+                      </>
+                    )}
                   </p>
                 </div>
                 <div className="another__awards">
@@ -108,11 +115,19 @@ const Home = () => {
                   <div
                     className={`point ${isPage ? "point-active" : ""} ${
                       isPage && theme.theme === "dark" ? "bg-white" : "bg-gray"
+                    } ${
+                      isPage && theme.theme === "dark"
+                        ? "bg__btn"
+                        : "bg__btn-active"
                     }`}
                   ></div>
                   <div
                     className={`point ${isPage ? "" : "point-active"} ${
                       isPage && theme.theme === "dark" ? "bg-gray" : "bg-white"
+                    } ${
+                      isPage && theme.theme === "dark"
+                        ? "bg__btn-active"
+                        : "bg__btn"
                     }`}
                   ></div>
                 </div>
