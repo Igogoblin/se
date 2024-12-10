@@ -1099,8 +1099,9 @@ li::before {
   position: absolute;
   bottom: 25px;
   right: -35px;
+  color: rgba(0, 0, 0, 1);
 }
-.contact__show-correct {
+.contact__email-image .contact__show {
   /* width: 18px;
   height: 18px; */
   padding: 0 6px 6px 0;
@@ -1331,6 +1332,7 @@ li.contact__area-item.contacts__color-white::before {
   .contact__email-image {
     bottom: 15px;
     right: -35px;
+    color: rgba(0, 0, 0, 1);
   }
   .contacts__logo {
     top: 20%;
