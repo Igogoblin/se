@@ -3,14 +3,15 @@ import copyImage from "../../assets/images/copyEmail.svg";
 import copyImageDark from "../../assets/images/copyEmailDark.svg";
 import copiedV from "../../assets/images/copiedV.svg";
 import copiedVDark from "../../assets/images/copiedVDark.svg";
-// import copyHoverWhite from "../../assets/images/copyHoverWhite.svg";
+import copyHoverWhite from "../../assets/images/copyHoverWhite.svg";
 // import copyHoverDark from "../../assets/images/copyHoverBlack.svg";
+import copyHoverDark from "../../assets/images/forCopyBlackQuards.svg";
 import { useState } from "react";
 
 const Email = () => {
   const theme = useSelector((state) => state.mode);
   const [copied, isCopied] = useState(false);
-  // const [setHover, isHover] = useState(false);
+  const [hover, isHover] = useState(false);
   let imageCopy = copied ? copiedV : copyImage;
   let imageCopyDark = copied ? copiedVDark : copyImageDark;
   // setHover(theme.theme === "dark"? );
@@ -22,13 +23,6 @@ const Email = () => {
       .querySelector(".email__copied")
       .classList.add("email__copied--active");
   }
-  // function setHover() {
-  //   imageCopy = !copied ? copyHoverDark : copyImage;
-  //   console.log(imageCopy === copyHoverDark);
-  //   // imageCopy =
-  //   //   theme.theme === "dark" && copied ? copyHoverWhite : copyImageDark;
-  //   console.log("hover", copied);
-  // }
 
   return (
     <div onClick={copyClipboard} className="email">
@@ -48,12 +42,19 @@ const Email = () => {
           </span>
         </div>
         <img
-          src={theme.theme === "dark" ? imageCopyDark : imageCopy}
+          src={
+            hover
+              ? theme.theme === "dark"
+                ? copyHoverWhite
+                : copyHoverDark
+              : theme.theme === "dark"
+              ? imageCopyDark
+              : imageCopy
+          }
           alt="copy email"
-          className={`email__img ${
-            ""
-            // theme.theme === "dark" ? "email__img-dark" : ""
-          }`}
+          onMouseEnter={() => isHover(true)}
+          onMouseLeave={() => isHover(false)}
+          className="email__img"
         />
       </div>
 

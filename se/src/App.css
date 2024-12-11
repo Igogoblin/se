@@ -227,13 +227,7 @@ nav {
   gap: 3px;
   margin-right: 16px;
 }
-/* .email__text:hover .email__img {
-  background-image: url("./assets/images/copyHoverBlack.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 50%;
-  height: 50%;
-} */
+
 .email .email__title {
   font-family: "HelveticaNowMicro";
   display: flex;
@@ -280,16 +274,7 @@ button.email__btn {
 .burger-menu {
   display: none;
 }
-.email__img-dark {
-  background-image: url("./assets/images/copyHoverBlack.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-}
-/* .email__img:hover {
-  background-image: url("./assets/images/quadrCopyWhite.svg");
-} */
+
 @media screen and (max-width: 1000px) {
   .email__text,
   .email__copied,
@@ -414,10 +399,39 @@ button.email__btn {
 
 /* finish burger menu ----------- */
 /* start main page ---------------------------------------------------------- */
-/* main {
+main {
   width: 100%;
   height: 90vh;
-} */
+  position: relative;
+}
+.main__logo {
+  width: 244px;
+  height: 244px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-height: 900px) {
+  .main__logo {
+    top: 60%;
+  }
+}
+@media screen and (max-height: 750px) {
+  .main__logo {
+    top: 70%;
+  }
+}
+@media screen and (max-height: 680px) {
+  .main__logo {
+    top: 80%;
+  }
+}
+@media screen and (max-height: 560px) {
+  .main__logo {
+    top: 90%;
+  }
+}
 .wrapper {
   max-width: calc(100vw - 32px);
   width: 100%;
@@ -1091,6 +1105,9 @@ li::before {
   color: rgba(60, 60, 67, 0.6);
   /* letter-spacing: -1px; */
   letter-spacing: 0px;
+}
+.contact__email-copied.contact__email-copied--active {
+  color: rgba(0, 0, 0, 1);
 }
 .contact__show {
   display: none;

@@ -4,6 +4,8 @@ import behance from "../assets/images/mainBehance.svg";
 import maniUI from "../assets/images/mainUI.svg";
 import mainAwards2 from "../assets/images/mainAwards2.svg";
 import { useState } from "react";
+import mainLogoWhite from "../assets/images/ES_LogoWhite.svg";
+import mainLogo from "../assets/images/ES_Logo.svg";
 
 const HOME = {
   en: {
@@ -179,6 +181,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <img
+        src={theme.theme === "dark" ? mainLogoWhite : mainLogo}
+        alt="logo"
+        className="main__logo"
+      />
     </main>
   );
 };
