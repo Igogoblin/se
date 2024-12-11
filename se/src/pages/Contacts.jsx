@@ -10,6 +10,9 @@ import copyImageDark from "../assets/images/copyEmailDark.svg";
 import copiedV from "../assets/images/copiedV.svg";
 import copiedVDark from "../assets/images/copiedVDark.svg";
 import contactLogo from "../assets/images/contactsES_Logo.svg";
+import copyEmailDark from "../assets/images/forCopyBlackQuards.svg";
+// import copyEmailWhite from "../assets/images/forCopyWhiteQuards.svg";
+import copyEmailWhite from "../assets/images/copyHoverWhite.svg";
 const CONTACTS = {
   en: {
     title1:
@@ -40,6 +43,7 @@ const CONTACTS = {
 const Contacts = () => {
   const theme = useSelector((state) => state.mode);
   const [copied, isCopied] = useState(false);
+  const [hover, isHover] = useState(false);
   function copyClipboard() {
     isCopied(true);
     navigator.clipboard.writeText("sokolovski.ea@gmail.com");
@@ -52,16 +56,30 @@ const Contacts = () => {
           className={theme.theme === "dark" ? "contacts__color-white" : ""}
         >
           sokolovski.ea@gmail.com
-          <span className="contact__email-copied">
+          <span
+            className={`contact__email-copied ${
+              copied ? "contact__email-copied--active" : ""
+            }`}
+          >
             {copied && (theme.language === "en" ? "copied" : "скопировано")}
           </span>
           <img
             className={`contact__email-image ${copied ? "contact__show" : ""}`}
-            src={theme.theme === "light" ? copyImage : copyImageDark}
+            src={
+              hover
+                ? theme.theme === "dark"
+                  ? copyEmailWhite
+                  : copyEmailDark
+                : theme.theme === "dark"
+                ? copyImageDark
+                : copyImage
+            }
             alt="copy"
+            onMouseEnter={() => isHover(true)}
+            onMouseLeave={() => isHover(false)}
           />
           <img
-            className={`contact__email-image  contact__show-correct${
+            className={`contact__email-image  contact__show-correct ${
               copied ? "" : "contact__show"
             }`}
             src={theme.theme === "light" && copied ? copiedV : copiedVDark}
